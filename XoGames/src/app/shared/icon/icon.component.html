@@ -1,0 +1,14 @@
+<img
+  *ngIf="isIcon"
+  src="../../../assets/images/icons/{{imageName}}.svg"
+  [width]="width"
+  [height]="height"
+  alt="icon"
+>
+<img
+  *ngIf="!isIcon"
+  src="../../../assets/images/icons/{{imageName}}.svg"
+  [width]="width"
+  [height]="height"
+  alt="icon"
+>

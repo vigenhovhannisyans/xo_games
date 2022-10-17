@@ -1,0 +1,90 @@
+<div class="header">
+  <div [class.mobile]="(isMobile$ | async)" class="top-side">
+    <div class="left-side">
+      <app-icon
+        [imageName]="'logo'"
+        [width]="211"
+        [height]="22"
+        [isIcon]="true"
+      ></app-icon>
+    </div>
+    <div class="right-side">
+      <span [class.displayed]="(isMobile$ | async)" class="small-icons">
+        <span class="icon">
+        <app-icon
+          [imageName]="'message'"
+          [width]="21"
+          [height]="19"
+          [isIcon]="true"
+        ></app-icon>
+          </span>
+      </span>
+      <span [class.displayed]="(isMobile$ | async)" class="small-icons">
+        <span class="icon">
+        <app-icon
+          [imageName]="'fox'"
+          [width]="31"
+          [height]="34"
+          [isIcon]="true"
+        ></app-icon>
+          </span>
+      </span>
+      <div class="auth">
+        <div [class.show]="(isMobile$ | async)" class="burger">
+        <app-icon
+          [isIcon]="true"
+          [imageName]="'burger'"
+          [width]="30"
+          [height]="30"
+        ></app-icon>
+        </div>
+        <button class="login auth-btn">Login</button>
+        <button class="sign-up auth-btn sign-up">Sign up</button>
+      </div>
+      <div [class.displayed]="(isMobile$ | async)" class="language-block">
+        <div ngbDropdown class="d-inline-block w-89">
+          <button type="button" class="btn language-drop-btn" ngbDropdownToggle>
+            <ng-container *ngFor="let selectedLang of languages">
+              <div *ngIf="selectedLang.selected" class="btn-content">
+                <app-icon
+                  [imageName]="selectedLang.icon"
+                  [width]="23"
+                  [height]="13"
+                ></app-icon>
+                <span class="title">{{selectedLang.title}}</span>
+                <app-icon
+                  [imageName]="'arrow-down'"
+                  [width]="13"
+                  [height]="13"
+                ></app-icon>
+              </div>
+            </ng-container>
+          </button>
+
+          <div ngbDropdownMenu aria-labelledby="dropdown1" class="language-dropdown">
+            <ng-container *ngFor="let selectedLang of languages">
+            <span (click)="setSelectedLanguage(selectedLang)" class="language">
+                <app-icon
+                  [imageName]="selectedLang.icon"
+                  [width]="23"
+                  [height]="13"
+                ></app-icon>
+              <span class="title">{{selectedLang.fullTitle}}</span>
+            </span>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+      <div [class.displayed]="(isMobile$ | async)" class="settings">
+        <app-icon
+          [imageName]="'settings'"
+          [width]="17"
+          [height]="17"
+        ></app-icon>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-side">
+
+  </div>
+</div>
