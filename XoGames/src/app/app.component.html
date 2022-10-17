@@ -3,7 +3,7 @@
     <app-header></app-header>
   </div>
 
-  <div class="outlet">
+  <div [class.mobile]="(isMobile$ | async)" class="outlet">
     <router-outlet></router-outlet>
   </div>
 

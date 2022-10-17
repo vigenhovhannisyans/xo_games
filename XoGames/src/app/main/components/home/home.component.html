@@ -1,1 +1,83 @@
-<p>home works!</p>
+<div class="home">
+  <div class="top-slider-side">
+    <div [class.mobile]="(isMobile$ | async)" class="left-slider">
+      <div class="buttons">
+        <button class="btn bonus">Get Bonus</button>
+        <button class="btn">Learn More</button>
+      </div>
+      <div class="text">
+        <span class="title">Sport bonus up to $500</span>
+        <span class="small-title">You should just create account</span>
+      </div>
+      <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+          <img class="slider-img" [src]="slide.img" alt="">
+        </div>
+      </ngx-slick-carousel>
+    </div>
+
+    <div [class.displayed]="(isMobile$ | async)" class="right-slider">
+      <div class="buttons">
+        <button class="btn bonus">Get Bonus</button>
+      </div>
+      <div class="text">
+        <span class="title">Casino welcome bonus</span>
+        <span class="small-title">You should just create account</span>
+      </div>
+      <ngx-slick-carousel class="carousel" [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of smallSlide" class="slide">
+          <img class="slider-img" [src]="slide.img" alt="">
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
+
+  <div class="soccer-slider">
+    <ngx-slick-carousel class="carousel" [config]="soccerSliderConfig">
+      <ng-container>
+        <div ngxSlickItem class="slide">
+          <span class="circle top"></span>
+          <span class="circle bottom"></span>
+          <div class="content">
+            <div class="star">
+            <app-icon
+            [isIcon]="true"
+            [imageName]="'star'"
+            [width]="20"
+            [height]="20"
+            ></app-icon>
+            </div>
+            <div class="team">
+              <div class="icon">
+                <app-icon
+                  [imageName]="'manchester'"
+                  [isSoccer]="true"
+                  [width]="41"
+                  [height]="41"
+                ></app-icon>
+              </div>
+              <span class="title">Manchester City</span>
+            </div>
+            <div class="time">
+              <span class="date">8 jan</span>
+              <span class="hour">12:00</span>
+            </div>
+
+            <div class="team">
+              <div class="icon">
+                <app-icon
+                  [imageName]="'arsenal'"
+                  [isSoccer]="true"
+                  [width]="41"
+                  [height]="41"
+                ></app-icon>
+              </div>
+              <span class="title">Arsenal</span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </ngx-slick-carousel>
+  </div>
+
+</div>

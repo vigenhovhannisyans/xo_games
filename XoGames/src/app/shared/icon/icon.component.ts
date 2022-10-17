@@ -10,6 +10,7 @@ export class IconComponent implements OnInit {
   @Input() width!: number;
   @Input() height!: number;
   @Input() isIcon!: boolean;
+  @Input() isSoccer!: boolean;
   constructor() { }
 
   ngOnInit(): void {

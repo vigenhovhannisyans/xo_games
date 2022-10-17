@@ -1,0 +1,297 @@
+.home {
+  .top-slider-side {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    ::ng-deep {
+      .slick-prev {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background: rgba(14, 14, 32, 0.7);
+        border-radius: 8px;
+        z-index: 9;
+        left: auto;
+        top: auto;
+        transform: translate(-100px, -25px);
+
+        &::before {
+          content: "";
+          background-image: url('../../../../assets/images/icons/arrow-left.svg');
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .slick-next {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background: rgba(14, 14, 32, 0.7);
+        border-radius: 8px;
+        z-index: 9;
+        left: auto;
+        top: auto;
+        transform: translate(-45px, -25px);
+
+        &::before {
+          content: "";
+          background-image: url('../../../../assets/images/icons/arrow-right.svg');
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .left-slider {
+      border-radius: 6px;
+      position: relative;
+      margin-right: 20px;
+      width: 70%;
+      height: 320px;
+
+      &.mobile {
+        width: 100%;
+      }
+
+      .buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        transform: translate(50px, -25px);
+
+        .btn {
+          width: 140px;
+          height: 42px;
+          font-weight: 600;
+          color: white;
+          border: 0.6px solid #DE303D;
+          border-radius: 8px;
+          text-align: center;
+
+          &.bonus {
+            background-color: #DE303D;
+            margin-right: 13px;
+          }
+        }
+      }
+
+      .text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        transform: translate(50px, 30px);
+        width: 303px;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-weight: 700;
+          color: white;
+          font-size: 47px;
+          line-height: 55px;
+        }
+
+        .small-title {
+          margin-top: 10px;
+          color: #8D838D;
+          font-size: 13px;
+
+        }
+      }
+
+      .carousel {
+
+        .slider-img {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .right-slider {
+      border-radius: 6px;
+      width: 30%;
+      height: 320px;
+      position: relative;
+
+      .buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+        transform: translate(50px, -25px);
+
+        .btn {
+          width: 140px;
+          height: 42px;
+          font-weight: 600;
+          color: white;
+          border: 0.6px solid #DE303D;
+          border-radius: 8px;
+          text-align: center;
+
+          &.bonus {
+            background-color: #DE303D;
+            margin-right: 13px;
+          }
+        }
+      }
+
+      .text {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        transform: translate(50px, 30px);
+        width: 303px;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+          font-weight: 700;
+          color: white;
+          font-size: 47px;
+          line-height: 55px;
+        }
+
+        .small-title {
+          margin-top: 10px;
+          color: #8D838D;
+          font-size: 13px;
+
+        }
+      }
+
+      .carousel {
+        .slider-img {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .soccer-slider {
+    .slide {
+      background-color: white;
+      height: 109px;
+      width: 317px;
+      border-radius: 14px;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        padding: 0 30px;
+
+        .star {
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform: translate(-10px, 5px);
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .team {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100px;
+          height: 90px;
+
+          .title {
+            font-weight: 500;
+            color: #292033;
+            text-align: center;
+            margin-top: 10px;
+          }
+        }
+
+        .time {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #292033;
+          font-weight: 700;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          .date {
+            font-size: 15px;
+          }
+
+          .hour {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .circle {
+        width: 15px;
+        height: 15px;
+        background-color: #151327;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+
+        &.top {
+          transform: translate(-50%, -410%);
+        }
+
+        &.bottom {
+          transform: translate(-50%, 310%);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .top-slider-side {
+      .left-slider, .right-slider {
+        width: 50%;
+      }
+
+      ::ng-deep {
+        .slick-prev {
+          transform: translate(-70px, -25px);
+        }
+
+        .slick-next {
+          transform: translate(-15px, -25px);
+        }
+      }
+    }
+  }
+
+  .displayed {
+    display: none;
+  }
+}

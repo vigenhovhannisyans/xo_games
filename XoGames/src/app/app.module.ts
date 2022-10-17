@@ -5,28 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
-import { IconComponent } from './shared/icon/icon.component';
-import { LivePointComponent } from './shared/live-point/live-point.component';
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    IconComponent,
-    LivePointComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
-  ],
-  exports: [
-    IconComponent,
-    LivePointComponent
+    NgbModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Observable} from "rxjs";
+import {MobileService} from "./core/services/mobile.service";
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import {Observable} from "rxjs";
 })
 export class AppComponent {
   title = 'XoGames';
+  isMobile$: Observable<boolean> = this._isMobileService.isMobile$;
+  constructor(
+    private _isMobileService: MobileService
+  ){
+  }
 }
