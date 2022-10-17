@@ -84,7 +84,38 @@
       </div>
     </div>
   </div>
-  <div class="bottom-side">
-
+  <div [class.mobile]="(isMobile$ | async)" class="bottom-side">
+    <ul [class.mobile]="(isMobile$ | async)" class="actions">
+    <ng-container *ngFor="let router of allRoutes">
+      <li routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" class="list" [routerLink]="router.route">
+        <span class="title live">
+          {{router.title}}
+          <span *ngIf="router.hasLive" class="live-point">
+            <app-live-point></app-live-point>
+          </span>
+        <span class="active-line"></span>
+        </span>
+      </li>
+    </ng-container>
+    </ul>
+    <div [class.mobile]="(isMobile$ | async)" class="right-side">
+      <span class="title">Mobile app</span>
+      <div class="icon android">
+      <app-icon
+        [imageName]="'android'"
+        [isIcon]="true"
+        [width]="17"
+        [height]="18"
+      ></app-icon>
+      </div>
+      <div class="icon">
+      <app-icon
+        [imageName]="'apple'"
+        [isIcon]="true"
+        [width]="17"
+        [height]="18"
+      ></app-icon>
+      </div>
+    </div>
   </div>
 </div>

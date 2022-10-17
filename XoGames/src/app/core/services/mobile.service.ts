@@ -8,7 +8,7 @@ import {BreakpointObserver, BreakpointState} from "@angular/cdk/layout";
 })
 export class MobileService {
   private _unsubscribeAll: Subject<any> = new Subject<any>();
-  isMobile$: Observable<boolean> = this.breakPointObserver.observe('(min-width: 991px)').pipe(
+  isMobile$: Observable<boolean> = this.breakPointObserver.observe('(min-width: 1111px)').pipe(
     takeUntil(this._unsubscribeAll),
     map((state: BreakpointState) => !state.matches)
   );

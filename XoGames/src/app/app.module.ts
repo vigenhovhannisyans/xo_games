@@ -8,13 +8,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { IconComponent } from './shared/icon/icon.component';
+import { LivePointComponent } from './shared/live-point/live-point.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    IconComponent
+    IconComponent,
+    LivePointComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { IconComponent } from './shared/icon/icon.component';
     NgbModule
   ],
   exports: [
-    IconComponent
+    IconComponent,
+    LivePointComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]

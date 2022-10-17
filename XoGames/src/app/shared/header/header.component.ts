@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {LanguageI} from "../../core/models/language-i";
 import {MobileService} from "../../core/services/mobile.service";
 import {Observable} from "rxjs";
+import {RouterLinkService} from "../../core/services/router-link.service";
+import {RouterI} from "../../core/models/router-i";
 
 @Component({
   selector: 'app-header',
@@ -9,7 +11,8 @@ import {Observable} from "rxjs";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isMobile$: Observable<boolean> = this.isMobileService.isMobile$;
+  isMobile$: Observable<boolean> = this._isMobileService.isMobile$;
+  allRoutes!: RouterI[];
   languages: LanguageI[] = [
     {
       id: 1,
@@ -42,16 +45,23 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(
-    private isMobileService: MobileService,
+    private _isMobileService: MobileService,
+    private _routerLinkService: RouterLinkService
   ) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllRoutes();
+  }
 
   setSelectedLanguage(selected: LanguageI): void {
     this.languages.forEach(language => {
       language.selected = selected === language;
     })
+  }
+
+  getAllRoutes(): void {
+    this.allRoutes = this._routerLinkService.getAllRoutes();
   }
 
 }
