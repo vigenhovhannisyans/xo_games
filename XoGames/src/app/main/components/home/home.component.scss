@@ -1,4 +1,7 @@
 .home {
+  $right_arrow: '../../../../assets/images/icons/arrow-right.svg';
+  $left_arrow: '../../../../assets/images/icons/arrow-left.svg';
+  $carousel_button_background: rgba(14, 14, 32, 0.7);
   .top-slider-side {
     display: flex;
     flex-wrap: nowrap;
@@ -11,7 +14,7 @@
         right: 0;
         width: 44px;
         height: 44px;
-        background: rgba(14, 14, 32, 0.7);
+        background: $carousel_button_background;
         border-radius: 8px;
         z-index: 9;
         left: auto;
@@ -20,7 +23,7 @@
 
         &::before {
           content: "";
-          background-image: url('../../../../assets/images/icons/arrow-left.svg');
+          background-image: url($left_arrow);
           width: 40px;
           height: 40px;
           display: block;
@@ -35,7 +38,7 @@
         right: 0;
         width: 44px;
         height: 44px;
-        background: rgba(14, 14, 32, 0.7);
+        background: $carousel_button_background;
         border-radius: 8px;
         z-index: 9;
         left: auto;
@@ -44,7 +47,7 @@
 
         &::before {
           content: "";
-          background-image: url('../../../../assets/images/icons/arrow-right.svg');
+          background-image: url($right_arrow);
           width: 40px;
           height: 40px;
           display: block;
@@ -188,6 +191,72 @@
   }
 
   .soccer-slider {
+    ::ng-deep {
+      .slick-next {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background: $carousel_button_background;
+        border-radius: 8px;
+        z-index: 9;
+        left: auto;
+        top: auto;
+        transform: translate(15px, -30px);
+
+        &::before {
+          content: "";
+          background-image: url($right_arrow);
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .slick-prev {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 44px;
+        height: 44px;
+        background: $carousel_button_background;
+        border-radius: 8px;
+        z-index: 9;
+        right: auto;
+        top: auto;
+        transform: translate(-15px, -30px);
+
+        &::before {
+          content: "";
+          background-image: url($left_arrow);
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .popular-matches {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: block;
+      color: white;
+      font-weight: 600;
+    }
+
+    .slick-slide {
+      margin: 0 17px;
+    }
+
+    .slick-list {
+      margin: 0 -17px;
+    }
+
     .slide {
       background-color: white;
       height: 109px;
@@ -231,22 +300,18 @@
         }
 
         .time {
+          white-space: nowrap;
           display: flex;
           flex-direction: column;
           align-items: center;
           color: #292033;
           font-weight: 700;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-
           .date {
             font-size: 15px;
           }
 
           .hour {
-            font-size: 18px;
+            font-size: 15px;
           }
         }
       }
