@@ -355,6 +355,29 @@
       }
     }
   }
+  @media (max-width: 991px) {
+    .soccer-slider {
+      ::ng-deep {
+        .slick-prev {
+         display: none !important;
+        }
+        .slick-next {
+         display: none !important;
+        }
+        .slick-dots{
+          text-align: left;
+          transform: translateY(10px);
+          li{
+            button{
+             &::before{
+               color: white;
+             }
+            }
+          }
+        }
+      }
+    }
+  }
 
   .displayed {
     display: none;
