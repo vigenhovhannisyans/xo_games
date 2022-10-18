@@ -41,12 +41,12 @@
           <span class="circle bottom"></span>
           <div class="content">
             <div class="star">
-            <app-icon
-            [isIcon]="true"
-            [imageName]="'star'"
-            [width]="20"
-            [height]="20"
-            ></app-icon>
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'star'"
+                [width]="20"
+                [height]="20"
+              ></app-icon>
             </div>
             <div class="team">
               <div class="icon">
@@ -80,5 +80,537 @@
       </ng-container>
     </ngx-slick-carousel>
   </div>
-
+  <div [class.flexed-to-down]="(isMobile$ | async)" class="match-side">
+    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="inPlay" class="sides">
+      <div class="header">
+        <div (click)="inPlay = 0" [class.active]="inPlay === 0" class="option in-play">
+            <span class="title-side">
+             <span class="title">In Play</span>
+              <app-live-point></app-live-point>
+            </span>
+        </div>
+        <div (click)="inPlay = 1" [class.active]="inPlay === 1" class="option soccer">
+            <span class="title-side">
+              <app-icon
+              [isIcon]="true"
+              [imageName]="'soccer'"
+              [width]="20"
+              [height]="20"
+              [isWhite]="(inPlay !== 1)"
+              ></app-icon>
+             <span class="title">
+               Soccer
+             </span>
+            </span>
+        </div>
+        <div (click)="inPlay = 2" [class.active]="inPlay === 2" class="option">
+            <span class="title-side">
+              <app-icon
+              [isIcon]="true"
+              [imageName]="'tennis'"
+              [width]="20"
+              [height]="20"
+              [isWhite]="(inPlay !== 2)"
+              ></app-icon>
+              <span [class.displayed]="inPlay !== 2" class="title">
+               Tennis
+             </span>
+            </span>
+        </div>
+        <div (click)="inPlay = 3" [class.active]="inPlay === 3" class="option">
+            <span class="title-side">
+              <app-icon
+              [isIcon]="true"
+              [imageName]="'boxing'"
+              [width]="20"
+              [height]="20"
+              [isWhite]="(inPlay !== 3)"
+              ></app-icon>
+              <span [class.displayed]="inPlay !== 3" class="title">
+               Boxing
+             </span>
+            </span>
+        </div>
+        <div (click)="inPlay = 4" [class.active]="inPlay === 4" class="option">
+            <span class="title-side">
+              <app-icon
+              [isIcon]="true"
+              [imageName]="'basketball'"
+              [width]="20"
+              [height]="20"
+              [isWhite]="(inPlay !== 4)"
+              ></app-icon>
+              <span [class.displayed]="inPlay !== 4" class="title">
+               Basketball
+             </span>
+            </span>
+        </div>
+      </div>
+      <div [class.active]="inPlay !== 0" class="content-side">
+        <table class="table">
+          <thead class="head">
+          <tr class="t-row">
+            <th scope="col" class="table-header">Time</th>
+            <th scope="col" class="table-header">Match</th>
+            <th scope="col" class="table-header">&nbsp;</th>
+            <th scope="col" class="table-header bet-header">1</th>
+            <th scope="col" class="table-header bet-header">X</th>
+            <th scope="col" class="table-header bet-header">2</th>
+            <th scope="col" class="table-header bet-col">Bets</th>
+          </tr>
+          </thead>
+          <tbody *ngSwitchCase="0" class="body">
+          <tr class="body-row" *ngFor="let country of countries; index as i">
+            <td class="time"><span class="date">8 Jan</span> <span class="clock">20:00</span></td>
+            <td class="match">
+              <span class="team">
+                <span class="score">3</span>
+                <span class="title">Switzerland (Apollo)</span>
+              </span>
+              <span class="team">
+                <span class="score">0</span>
+                <span class="title">Australia (Kubrik)</span>
+              </span>
+            </td>
+            <td class="score">
+                <span class="count">(2:0 - 1:0)</span>
+              <app-icon
+              [isIcon]="true"
+              [imageName]="'clock'"
+              [width]="15"
+              [height]="15"
+              ></app-icon>
+              <span class="match-time">3'</span>
+            </td>
+            <td class="bets">
+              <span class="column">1.9</span>
+            </td>
+            <td class="bets">
+              <span class="column">1.9</span>
+            </td>
+            <td class="bets">
+              <span class="column">1.9</span>
+            </td>
+            <td class="bets light-bet">
+              <span class="column">
+                1.9
+                <app-icon
+                [isIcon]="true"
+                [imageName]="'arrow-right-black'"
+                [width]="10"
+                [height]="10"
+                ></app-icon>
+              </span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="preMatch" class="sides">
+      <div class="header">
+        <div (click)="preMatch = 0" [class.active]="preMatch === 0" class="option in-play">
+            <span class="title-side">
+             <span class="title">Prematch</span>
+            </span>
+        </div>
+        <div (click)="preMatch = 1" [class.active]="preMatch === 1" class="option soccer">
+            <span class="title-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'soccer'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(preMatch !== 1)"
+              ></app-icon>
+             <span class="title">
+               Soccer
+             </span>
+            </span>
+        </div>
+        <div (click)="preMatch = 2" [class.active]="preMatch === 2" class="option">
+            <span class="title-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'tennis'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(preMatch !== 2)"
+              ></app-icon>
+              <span [class.displayed]="preMatch !== 2" class="title">
+               Tennis
+             </span>
+            </span>
+        </div>
+        <div (click)="preMatch = 3" [class.active]="preMatch === 3" class="option">
+            <span class="title-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'boxing'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(preMatch !== 3)"
+              ></app-icon>
+              <span [class.displayed]="preMatch !== 3" class="title">
+               Boxing
+             </span>
+            </span>
+        </div>
+        <div (click)="preMatch = 4" [class.active]="preMatch === 4" class="option">
+            <span class="title-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'basketball'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(preMatch !== 4)"
+              ></app-icon>
+              <span [class.displayed]="preMatch !== 4" class="title">
+               Basketball
+             </span>
+            </span>
+        </div>
+      </div>
+      <div [class.active]="preMatch !== 0" class="content-side">
+        <table class="table">
+          <thead class="head">
+          <tr class="t-row">
+            <th scope="col" class="table-header">Time</th>
+            <th scope="col" class="table-header">Match</th>
+            <th scope="col" class="table-header bet-header">1</th>
+            <th scope="col" class="table-header bet-header">X</th>
+            <th scope="col" class="table-header bet-header">2</th>
+            <th scope="col" class="table-header bet-col">Bets</th>
+          </tr>
+          </thead>
+          <tbody *ngSwitchCase="0" class="body">
+          <tr class="body-row" *ngFor="let country of countries; index as i">
+            <td class="time"><span class="date">8 Jan</span> <span class="clock">20:00</span></td>
+            <td class="match">
+              <span class="team">
+                <span class="title">Switzerland (Apollo)</span>
+              </span>
+              <span class="team">
+                <span class="title">Australia (Kubrik)</span>
+              </span>
+            </td>
+            <td class="bets">
+              <span class="column">1.9</span>
+            </td>
+            <td class="bets">
+              <span class="column">1.9</span>
+            </td>
+            <td class="bets">
+              <span class="column">1.9</span>
+            </td>
+            <td class="bets light-bet">
+              <span class="column">
+                1.9
+                <app-icon
+                  [isIcon]="true"
+                  [imageName]="'arrow-right-black'"
+                  [width]="10"
+                  [height]="10"
+                ></app-icon>
+              </span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div [class.show-displayed]="(isMobile$ | async)" class="in-play-mobile">
+    <div class="title-side">
+      <span class="title">In Play</span>
+      <span class="icon">
+      <app-live-point></app-live-point>
+        </span>
+    </div>
+    <div class="categories-side">
+      <div (click)="inPlay = 0" [ngClass]="{'active':inPlay===0, 'soccer':inPlay === 0}" class="category">
+        <app-icon
+        [isWhite]="true"
+        [imageName]="'soccer'"
+        [width]="21"
+        [height]="21"
+        [isIcon]="true"
+        ></app-icon>
+        <div class="title">Soccer</div>
+      </div>
+      <div (click)="inPlay = 1" [ngClass]="{'active':inPlay===1}" class="category">
+        <app-icon
+        [isWhite]="true"
+        [imageName]="'basketball'"
+        [width]="21"
+        [height]="21"
+        [isIcon]="true"
+        ></app-icon>
+        <div class="title">Basketball</div>
+      </div>
+      <div (click)="inPlay = 2" [ngClass]="{'active':inPlay===2}" class="category">
+        <app-icon
+        [isWhite]="true"
+        [imageName]="'tennis'"
+        [width]="21"
+        [height]="21"
+        [isIcon]="true"
+        ></app-icon>
+        <div class="title">Tennis</div>
+      </div>
+      <div (click)="inPlay = 3" [ngClass]="{'active':inPlay===3}" class="category">
+        <app-icon
+        [isWhite]="true"
+        [imageName]="'boxing'"
+        [width]="21"
+        [height]="21"
+        [isIcon]="true"
+        ></app-icon>
+        <div class="title">Boxing</div>
+      </div>
+      <div (click)="inPlay = 4" [ngClass]="{'active':inPlay===4}" class="category">
+        <app-icon
+        [isWhite]="true"
+        [imageName]="'volleyball'"
+        [width]="21"
+        [height]="21"
+        [isIcon]="true"
+        ></app-icon>
+        <div class="title">Volleyball</div>
+      </div>
+    </div>
+    <span class="all-sports">
+      All sports
+      <app-icon
+      [isIcon]="true"
+      [isWhite]="true"
+      [imageName]="'arrow-right'"
+      [width]="10"
+      [height]="10"
+      ></app-icon>
+    </span>
+    <div class="ticket-side">
+      <div class="ticket">
+        <span class="top-side">
+          <span class="date">8 jan</span>
+          <span class="clock">05:27</span>
+        </span>
+        <div class="team-side">
+          <div class="team">
+            <span class="team-name">
+              Switzerland (Apollo)
+            </span>
+            <span class="team-name">
+              Australia (Kubrik)
+            </span>
+          </div>
+          <div class="bet">
+            +35
+          </div>
+        </div>
+        <div class="bet-side">
+          <div class="bet-block-side">
+            <span class="title">1</span>
+            <span class="bet-block">1.9</span>
+          </div>
+          <div class="bet-block-side">
+            <span class="title">X</span>
+            <span class="bet-block">43</span>
+          </div>
+          <div class="bet-block-side">
+            <span class="title">2</span>
+            <span class="bet-block">15</span>
+          </div>
+        </div>
+      </div>
+      <div class="ticket">
+        <span class="top-side">
+          <span class="date">8 jan</span>
+          <span class="clock">05:27</span>
+        </span>
+        <div class="team-side">
+          <div class="team">
+            <span class="team-name">
+              Switzerland (Apollo)
+            </span>
+            <span class="team-name">
+              Australia (Kubrik)
+            </span>
+          </div>
+          <div class="bet">
+            +35
+          </div>
+        </div>
+        <div class="bet-side">
+          <div class="bet-block-side">
+            <span class="title">1</span>
+            <span class="bet-block">1.9</span>
+          </div>
+          <div class="bet-block-side">
+            <span class="title">X</span>
+            <span class="bet-block">43</span>
+          </div>
+          <div class="bet-block-side">
+            <span class="title">2</span>
+            <span class="bet-block">15</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="show-all-events-btn">
+      Show all events
+      <app-icon
+      [isIcon]="true"
+      [imageName]="'arrow-right'"
+      [width]="10"
+      [height]="10"
+      [isWhite]="true"
+      ></app-icon>
+    </button>
+  </div>
+    <div [class.show-displayed]="(isMobile$ | async)" class="in-play-mobile">
+      <div class="title-side">
+        <span class="title">Prematch</span>
+      </div>
+      <div class="categories-side">
+        <div (click)="preMatch = 0" [ngClass]="{'active':preMatch===0, 'soccer':preMatch === 0}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'soccer'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Soccer</div>
+        </div>
+        <div (click)="preMatch = 1" [ngClass]="{'active':preMatch===1}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'basketball'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Basketball</div>
+        </div>
+        <div (click)="preMatch = 2" [ngClass]="{'active':preMatch===2}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'tennis'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Tennis</div>
+        </div>
+        <div (click)="preMatch = 3" [ngClass]="{'active':preMatch===3}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'boxing'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Boxing</div>
+        </div>
+        <div (click)="preMatch = 4" [ngClass]="{'active':preMatch===4}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'volleyball'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Volleyball</div>
+        </div>
+      </div>
+      <span class="all-sports">
+      All sports
+      <app-icon
+        [isIcon]="true"
+        [isWhite]="true"
+        [imageName]="'arrow-right'"
+        [width]="10"
+        [height]="10"
+      ></app-icon>
+    </span>
+      <div class="ticket-side">
+        <div class="ticket">
+        <span class="top-side">
+          <span class="date">8 jan</span>
+          <span class="clock">05:27</span>
+        </span>
+          <div class="team-side">
+            <div class="team">
+            <span class="team-name">
+              Switzerland (Apollo)
+            </span>
+              <span class="team-name">
+              Australia (Kubrik)
+            </span>
+            </div>
+            <div class="bet">
+              +35
+            </div>
+          </div>
+          <div class="bet-side">
+            <div class="bet-block-side">
+              <span class="title">1</span>
+              <span class="bet-block">1.9</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">X</span>
+              <span class="bet-block">43</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">2</span>
+              <span class="bet-block">15</span>
+            </div>
+          </div>
+        </div>
+        <div class="ticket">
+        <span class="top-side">
+          <span class="date">8 jan</span>
+          <span class="clock">05:27</span>
+        </span>
+          <div class="team-side">
+            <div class="team">
+            <span class="team-name">
+              Switzerland (Apollo)
+            </span>
+              <span class="team-name">
+              Australia (Kubrik)
+            </span>
+            </div>
+            <div class="bet">
+              +35
+            </div>
+          </div>
+          <div class="bet-side">
+            <div class="bet-block-side">
+              <span class="title">1</span>
+              <span class="bet-block">1.9</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">X</span>
+              <span class="bet-block">43</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">2</span>
+              <span class="bet-block">15</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="show-all-events-btn">
+        Show all events
+        <app-icon
+          [isIcon]="true"
+          [imageName]="'arrow-right'"
+          [width]="10"
+          [height]="10"
+          [isWhite]="true"
+        ></app-icon>
+      </button>
+    </div>
+  </div>
 </div>

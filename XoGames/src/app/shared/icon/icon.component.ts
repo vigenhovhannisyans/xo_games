@@ -11,6 +11,7 @@ export class IconComponent implements OnInit {
   @Input() height!: number;
   @Input() isIcon!: boolean;
   @Input() isSoccer!: boolean;
+  @Input() isWhite!: boolean;
   constructor() { }
 
   ngOnInit(): void {

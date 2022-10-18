@@ -1,5 +1,7 @@
 <img
   *ngIf="isIcon"
+  [class.white]="isWhite && isWhite !== undefined"
+  [class.black]="!isWhite && isWhite !== undefined"
   src="../../../assets/images/icons/{{imageName}}.svg"
   [width]="width"
   [height]="height"

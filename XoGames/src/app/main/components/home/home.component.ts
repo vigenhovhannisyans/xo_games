@@ -3,6 +3,116 @@ import { MobileService } from "../../../core/services/mobile.service";
 import { Observable } from "rxjs";
 import {SportService} from "../../../core/services/sport.service";
 import {SportI} from "../../../core/models/sport-i";
+interface Country {
+  time: string;
+  match: number;
+  result: number;
+  one: number;
+  x: number;
+  two: number;
+  bets: number;
+}
+
+const COUNTRIES: Country[] = [
+  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },
+  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },  {
+    time: 'Russia',
+    match: 17075200,
+    result: 17075200,
+    one: 146989754,
+    x: 146989754,
+    two: 146989754,
+    bets: 146989754,
+  },
+];
 
 @Component({
   selector: 'app-home',
@@ -10,6 +120,9 @@ import {SportI} from "../../../core/models/sport-i";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  countries = COUNTRIES;
+  public inPlay = 0;
+  public preMatch = 0;
   public soccerMatches!: SportI[];
   isMobile$: Observable<boolean> = this._isMobileService.isMobile$;
   slides = [
