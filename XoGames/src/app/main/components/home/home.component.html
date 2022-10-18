@@ -160,7 +160,7 @@
           </tr>
           </thead>
           <tbody *ngSwitchCase="0" class="body">
-          <tr class="body-row" *ngFor="let country of countries; index as i">
+          <tr class="body-row" *ngFor="let match of countries; index as i">
             <td class="time"><span class="date">8 Jan</span> <span class="clock">20:00</span></td>
             <td class="match">
               <span class="team">
@@ -172,7 +172,7 @@
                 <span class="title">Australia (Kubrik)</span>
               </span>
             </td>
-            <td class="score">
+            <td class="score time-count">
               <span class="count">(2:0 - 1:0)</span>
               <app-icon
                 [isIcon]="true"
@@ -183,23 +183,17 @@
               <span class="match-time">3'</span>
             </td>
             <td class="bets">
-              <span class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">1.9</span>
             </td>
             <td class="bets">
-              <span class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">1.9</span>
             </td>
             <td class="bets">
-              <span class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">1.9</span>
             </td>
             <td class="bets light-bet">
               <span class="column">
                 1.9
-                <app-icon
-                  [isIcon]="true"
-                  [imageName]="'arrow-right-black'"
-                  [width]="10"
-                  [height]="10"
-                ></app-icon>
               </span>
             </td>
           </tr>
@@ -284,7 +278,7 @@
           </tr>
           </thead>
           <tbody *ngSwitchCase="0" class="body">
-          <tr class="body-row" *ngFor="let country of countries; index as i">
+          <tr class="body-row" *ngFor="let match of countries; index as i">
             <td class="time"><span class="date">8 Jan</span> <span class="clock">20:00</span></td>
             <td class="match">
               <span class="team">
@@ -295,23 +289,17 @@
               </span>
             </td>
             <td class="bets">
-              <span class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">1.9</span>
             </td>
             <td class="bets">
-              <span class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">1.9</span>
             </td>
             <td class="bets">
-              <span class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">1.9</span>
             </td>
             <td class="bets light-bet">
               <span class="column">
                 1.9
-                <app-icon
-                  [isIcon]="true"
-                  [imageName]="'arrow-right-black'"
-                  [width]="10"
-                  [height]="10"
-                ></app-icon>
               </span>
             </td>
           </tr>

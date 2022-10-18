@@ -7,6 +7,7 @@ import {LivePointComponent} from "./live-point/live-point.component";
 import {RouterModule} from "@angular/router";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {SlickCarouselModule} from "ngx-slick-carousel";
+import {MaterialModule} from "./material.module";
 
 
 
@@ -22,6 +23,7 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
     RouterModule,
     NgbModule,
     SlickCarouselModule,
+    MaterialModule
   ],
   exports: [
     FooterComponent,
