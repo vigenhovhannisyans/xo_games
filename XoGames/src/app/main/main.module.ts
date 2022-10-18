@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
@@ -16,7 +15,6 @@ import {SharedModule} from "../shared/shared.module";
   imports: [
     CommonModule,
     MainRoutingModule,
-    SlickCarouselModule,
     SharedModule
   ]
 })

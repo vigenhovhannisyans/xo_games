@@ -1,1 +1,94 @@
-<p>footer works!</p>
+<div [class.mobile]="(isMobile$ | async)" class="footer">
+  <div [class.mobile]="(isMobile$ | async)" class="top-side">
+    <div [class.mobile]="(isMobile$ | async)" class="list-side">
+      <ul class="list-ul">
+        <li class="list header">Products</li>
+        <li class="list">In Play</li>
+        <li class="list">Prematch</li>
+        <li class="list">Casino</li>
+        <li class="list">Live games</li>
+        <li class="list">Games</li>
+      </ul>
+
+      <ul class="list-ul">
+        <li class="list header">Services</li>
+        <li class="list">Popular questions</li>
+        <li class="list">Actions</li>
+        <li class="list">News</li>
+      </ul>
+
+      <ul class="list-ul">
+        <li class="list header">Company</li>
+        <li class="list"> Terms & conditions</li>
+        <li class="list">Privacy Policy</li>
+      </ul>
+
+      <ul class="list-ul">
+        <li class="list header">Account</li>
+        <li class="list">Login</li>
+        <li class="list">Create account</li>
+      </ul>
+    </div>
+    <div class="social-media">
+      <span [class.mobile]="(isMobile$ | async)" class="follow">Follow us in social media</span>
+      <div [class.mobile]="(isMobile$ | async)" class="circle-side">
+      <span class="circle">
+        <span class="icon">
+        <app-icon
+          [imageName]="'vk'"
+          [width]="20"
+          [height]="20"
+          [isIcon]="true"
+        ></app-icon>
+          </span>
+      </span>
+
+        <span class="circle">
+        <span class="icon">
+        <app-icon
+          [imageName]="'facebook'"
+          [width]="20"
+          [height]="20"
+          [isIcon]="true"
+        ></app-icon>
+          </span>
+      </span>
+
+        <span class="circle">
+        <span class="icon">
+        <app-icon
+          [imageName]="'instagram'"
+          [width]="20"
+          [height]="20"
+          [isIcon]="true"
+        ></app-icon>
+          </span>
+      </span>
+        <span class="circle">
+        <span class="icon">
+        <app-icon
+          [imageName]="'linkedin'"
+          [width]="20"
+          [height]="20"
+          [isIcon]="true"
+        ></app-icon>
+          </span>
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="slider-side">
+    <span class="we-accept">We accept</span>
+    <ngx-slick-carousel class="carousel" [config]="cardSlideConfig">
+      <div ngxSlickItem *ngFor="let slide of cardSlides" class="slide">
+        <img class="slider-img" [src]="slide.img" alt="">
+      </div>
+    </ngx-slick-carousel>
+  </div>
+
+  <div class="bottom-side">
+      <span class="title">©XoGames 2021</span>
+      <span class="more">Terms & conditions</span>
+      <span class="more">Privacy Policy</span>
+  </div>
+</div>

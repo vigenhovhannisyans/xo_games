@@ -124,6 +124,8 @@ export class HomeComponent implements OnInit {
   public inPlay = 0;
   public preMatch = 0;
   public soccerMatches!: SportI[];
+  public casino = 0;
+  public casinoLive = 0;
   isMobile$: Observable<boolean> = this._isMobileService.isMobile$;
   slides = [
     {img: "../../../../assets/images/covers/slider.svg"},

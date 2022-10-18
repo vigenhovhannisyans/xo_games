@@ -92,11 +92,11 @@
         <div (click)="inPlay = 1" [class.active]="inPlay === 1" class="option soccer">
             <span class="title-side">
               <app-icon
-              [isIcon]="true"
-              [imageName]="'soccer'"
-              [width]="20"
-              [height]="20"
-              [isWhite]="(inPlay !== 1)"
+                [isIcon]="true"
+                [imageName]="'soccer'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(inPlay !== 1)"
               ></app-icon>
              <span class="title">
                Soccer
@@ -106,11 +106,11 @@
         <div (click)="inPlay = 2" [class.active]="inPlay === 2" class="option">
             <span class="title-side">
               <app-icon
-              [isIcon]="true"
-              [imageName]="'tennis'"
-              [width]="20"
-              [height]="20"
-              [isWhite]="(inPlay !== 2)"
+                [isIcon]="true"
+                [imageName]="'tennis'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(inPlay !== 2)"
               ></app-icon>
               <span [class.displayed]="inPlay !== 2" class="title">
                Tennis
@@ -120,11 +120,11 @@
         <div (click)="inPlay = 3" [class.active]="inPlay === 3" class="option">
             <span class="title-side">
               <app-icon
-              [isIcon]="true"
-              [imageName]="'boxing'"
-              [width]="20"
-              [height]="20"
-              [isWhite]="(inPlay !== 3)"
+                [isIcon]="true"
+                [imageName]="'boxing'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(inPlay !== 3)"
               ></app-icon>
               <span [class.displayed]="inPlay !== 3" class="title">
                Boxing
@@ -134,11 +134,11 @@
         <div (click)="inPlay = 4" [class.active]="inPlay === 4" class="option">
             <span class="title-side">
               <app-icon
-              [isIcon]="true"
-              [imageName]="'basketball'"
-              [width]="20"
-              [height]="20"
-              [isWhite]="(inPlay !== 4)"
+                [isIcon]="true"
+                [imageName]="'basketball'"
+                [width]="20"
+                [height]="20"
+                [isWhite]="(inPlay !== 4)"
               ></app-icon>
               <span [class.displayed]="inPlay !== 4" class="title">
                Basketball
@@ -173,12 +173,12 @@
               </span>
             </td>
             <td class="score">
-                <span class="count">(2:0 - 1:0)</span>
+              <span class="count">(2:0 - 1:0)</span>
               <app-icon
-              [isIcon]="true"
-              [imageName]="'clock'"
-              [width]="15"
-              [height]="15"
+                [isIcon]="true"
+                [imageName]="'clock'"
+                [width]="15"
+                [height]="15"
               ></app-icon>
               <span class="match-time">3'</span>
             </td>
@@ -195,10 +195,10 @@
               <span class="column">
                 1.9
                 <app-icon
-                [isIcon]="true"
-                [imageName]="'arrow-right-black'"
-                [width]="10"
-                [height]="10"
+                  [isIcon]="true"
+                  [imageName]="'arrow-right-black'"
+                  [width]="10"
+                  [height]="10"
                 ></app-icon>
               </span>
             </td>
@@ -320,153 +320,153 @@
       </div>
     </div>
     <div [class.show-displayed]="(isMobile$ | async)" class="in-play-mobile">
-    <div class="title-side">
-      <span class="title">In Play</span>
-      <span class="icon">
+      <div class="title-side">
+        <span class="title">In Play</span>
+        <span class="icon">
       <app-live-point></app-live-point>
         </span>
-    </div>
-    <div class="categories-side">
-      <div (click)="inPlay = 0" [ngClass]="{'active':inPlay===0, 'soccer':inPlay === 0}" class="category">
-        <app-icon
-        [isWhite]="true"
-        [imageName]="'soccer'"
-        [width]="21"
-        [height]="21"
-        [isIcon]="true"
-        ></app-icon>
-        <div class="title">Soccer</div>
       </div>
-      <div (click)="inPlay = 1" [ngClass]="{'active':inPlay===1}" class="category">
-        <app-icon
-        [isWhite]="true"
-        [imageName]="'basketball'"
-        [width]="21"
-        [height]="21"
-        [isIcon]="true"
-        ></app-icon>
-        <div class="title">Basketball</div>
+      <div class="categories-side">
+        <div (click)="inPlay = 0" [ngClass]="{'active':inPlay===0, 'soccer':inPlay === 0}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'soccer'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Soccer</div>
+        </div>
+        <div (click)="inPlay = 1" [ngClass]="{'active':inPlay===1}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'basketball'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Basketball</div>
+        </div>
+        <div (click)="inPlay = 2" [ngClass]="{'active':inPlay===2}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'tennis'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Tennis</div>
+        </div>
+        <div (click)="inPlay = 3" [ngClass]="{'active':inPlay===3}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'boxing'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Boxing</div>
+        </div>
+        <div (click)="inPlay = 4" [ngClass]="{'active':inPlay===4}" class="category">
+          <app-icon
+            [isWhite]="true"
+            [imageName]="'volleyball'"
+            [width]="21"
+            [height]="21"
+            [isIcon]="true"
+          ></app-icon>
+          <div class="title">Volleyball</div>
+        </div>
       </div>
-      <div (click)="inPlay = 2" [ngClass]="{'active':inPlay===2}" class="category">
-        <app-icon
-        [isWhite]="true"
-        [imageName]="'tennis'"
-        [width]="21"
-        [height]="21"
-        [isIcon]="true"
-        ></app-icon>
-        <div class="title">Tennis</div>
-      </div>
-      <div (click)="inPlay = 3" [ngClass]="{'active':inPlay===3}" class="category">
-        <app-icon
-        [isWhite]="true"
-        [imageName]="'boxing'"
-        [width]="21"
-        [height]="21"
-        [isIcon]="true"
-        ></app-icon>
-        <div class="title">Boxing</div>
-      </div>
-      <div (click)="inPlay = 4" [ngClass]="{'active':inPlay===4}" class="category">
-        <app-icon
-        [isWhite]="true"
-        [imageName]="'volleyball'"
-        [width]="21"
-        [height]="21"
-        [isIcon]="true"
-        ></app-icon>
-        <div class="title">Volleyball</div>
-      </div>
-    </div>
-    <span class="all-sports">
+      <span class="all-sports">
       All sports
       <app-icon
-      [isIcon]="true"
-      [isWhite]="true"
-      [imageName]="'arrow-right'"
-      [width]="10"
-      [height]="10"
+        [isIcon]="true"
+        [isWhite]="true"
+        [imageName]="'arrow-right'"
+        [width]="10"
+        [height]="10"
       ></app-icon>
     </span>
-    <div class="ticket-side">
-      <div class="ticket">
+      <div class="ticket-side">
+        <div class="ticket">
         <span class="top-side">
           <span class="date">8 jan</span>
           <span class="clock">05:27</span>
         </span>
-        <div class="team-side">
-          <div class="team">
+          <div class="team-side">
+            <div class="team">
             <span class="team-name">
               Switzerland (Apollo)
             </span>
-            <span class="team-name">
+              <span class="team-name">
               Australia (Kubrik)
             </span>
+            </div>
+            <div class="bet">
+              +35
+            </div>
           </div>
-          <div class="bet">
-            +35
+          <div class="bet-side">
+            <div class="bet-block-side">
+              <span class="title">1</span>
+              <span class="bet-block">1.9</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">X</span>
+              <span class="bet-block">43</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">2</span>
+              <span class="bet-block">15</span>
+            </div>
           </div>
         </div>
-        <div class="bet-side">
-          <div class="bet-block-side">
-            <span class="title">1</span>
-            <span class="bet-block">1.9</span>
-          </div>
-          <div class="bet-block-side">
-            <span class="title">X</span>
-            <span class="bet-block">43</span>
-          </div>
-          <div class="bet-block-side">
-            <span class="title">2</span>
-            <span class="bet-block">15</span>
-          </div>
-        </div>
-      </div>
-      <div class="ticket">
+        <div class="ticket">
         <span class="top-side">
           <span class="date">8 jan</span>
           <span class="clock">05:27</span>
         </span>
-        <div class="team-side">
-          <div class="team">
+          <div class="team-side">
+            <div class="team">
             <span class="team-name">
               Switzerland (Apollo)
             </span>
-            <span class="team-name">
+              <span class="team-name">
               Australia (Kubrik)
             </span>
+            </div>
+            <div class="bet">
+              +35
+            </div>
           </div>
-          <div class="bet">
-            +35
-          </div>
-        </div>
-        <div class="bet-side">
-          <div class="bet-block-side">
-            <span class="title">1</span>
-            <span class="bet-block">1.9</span>
-          </div>
-          <div class="bet-block-side">
-            <span class="title">X</span>
-            <span class="bet-block">43</span>
-          </div>
-          <div class="bet-block-side">
-            <span class="title">2</span>
-            <span class="bet-block">15</span>
+          <div class="bet-side">
+            <div class="bet-block-side">
+              <span class="title">1</span>
+              <span class="bet-block">1.9</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">X</span>
+              <span class="bet-block">43</span>
+            </div>
+            <div class="bet-block-side">
+              <span class="title">2</span>
+              <span class="bet-block">15</span>
+            </div>
           </div>
         </div>
       </div>
+      <button class="show-all-events-btn">
+        Show all events
+        <app-icon
+          [isIcon]="true"
+          [imageName]="'arrow-right'"
+          [width]="10"
+          [height]="10"
+          [isWhite]="true"
+        ></app-icon>
+      </button>
     </div>
-    <button class="show-all-events-btn">
-      Show all events
-      <app-icon
-      [isIcon]="true"
-      [imageName]="'arrow-right'"
-      [width]="10"
-      [height]="10"
-      [isWhite]="true"
-      ></app-icon>
-    </button>
-  </div>
     <div [class.show-displayed]="(isMobile$ | async)" class="in-play-mobile">
       <div class="title-side">
         <span class="title">Prematch</span>
@@ -613,4 +613,218 @@
       </button>
     </div>
   </div>
+
+  <div [class.flexed-to-down]="(isMobile$ | async)" class="casino-side">
+    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="casino" class="sides">
+      <div class="header">
+        <div (click)="casino = 0" [class.active]="casino === 0" class="option">
+            <span class="title-side">
+             <span class="title">Casino</span>
+            </span>
+        </div>
+        <div (click)="casino = 1" [class.active]="casino === 1" class="option">
+            <span class="title-side">
+             <span class="title">
+               Drop & wings
+             </span>
+            </span>
+        </div>
+        <div (click)="casino = 2" [class.active]="casino === 2" class="option">
+            <span class="title-side">
+              <span class="title">
+               Live Casino
+             </span>
+            </span>
+        </div>
+        <div (click)="casino = 3" [class.active]="casino === 3" class="option">
+            <span class="title-side">
+              <span class="title">
+               Roulette
+             </span>
+            </span>
+        </div>
+      </div>
+      <div [class.active]="casino !== 0" class="content-side">
+        <span class="popular-title">Popular casino games</span>
+        <div *ngSwitchCase="0" class="game-block">
+          <div *ngFor="let game of countries" class="game">
+            <app-icon
+              [isCasino]="true"
+              [imageName]="'fruit'"
+              [width]="157"
+              [height]="123"
+            ></app-icon>
+          </div>
+
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+
+        </div>
+      </div>
+    </div>
+    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="casinoLive" class="sides">
+      <div class="header">
+        <div (click)="casinoLive = 0" [class.active]="casinoLive === 0" class="option">
+            <span class="title-side">
+             <span class="title">Live games</span>
+            </span>
+        </div>
+        <div (click)="casinoLive = 1" [class.active]="casinoLive === 1" class="option">
+            <span class="title-side">
+             <span class="title">
+               1 X 2
+             </span>
+            </span>
+        </div>
+        <div (click)="casinoLive = 2" [class.active]="casinoLive === 2" class="option">
+            <span class="title-side">
+              <span class="title">
+               Amatic
+             </span>
+            </span>
+        </div>
+        <div (click)="casinoLive = 3" [class.active]="casinoLive === 3" class="option">
+            <span class="title-side">
+              <span class="title">
+               Belatra
+             </span>
+            </span>
+        </div>
+      </div>
+      <div [class.active]="casinoLive !== 0" class="content-side">
+        <span class="popular-title">Popular casino games</span>
+        <div *ngSwitchCase="0" class="game-block">
+          <div *ngFor="let game of countries" class="game">
+            <app-icon
+              [isCasino]="true"
+              [imageName]="'suit'"
+              [width]="157"
+              [height]="123"
+            ></app-icon>
+          </div>
+
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+
+        </div>
+      </div>
+    </div>
+    <div [class.show-displayed]="(isMobile$ | async)" class="casino-mobile">
+      <span class="main-title">Casino</span>
+      <div class="header">
+        <div (click)="casino = 0" [class.active]="casino === 0" class="option">
+            <span class="title-side">
+             <span class="title">
+               Drop & wings
+             </span>
+            </span>
+        </div>
+        <div (click)="casino = 1" [class.active]="casino === 1" class="option">
+            <span class="title-side">
+              <span class="title">
+               Live Casino
+             </span>
+            </span>
+        </div>
+        <div (click)="casino = 2" [class.active]="casino === 2" class="option">
+            <span class="title-side">
+              <span class="title">
+               Roulette
+             </span>
+            </span>
+        </div>
+      </div>
+      <div [ngSwitch]="casino" class="game-side">
+         <div *ngSwitchCase="0" class="game-block">
+           <ng-container *ngFor="let game of countries; let i = index">
+           <div *ngIf="i < 6" class="game">
+              <app-icon
+                [isCasino]="true"
+                [imageName]="'fruit'"
+                [width]="200"
+                [height]="150"
+              ></app-icon>
+            </div>
+           </ng-container>
+           <div class="game hidden-game"></div>
+           <div class="game hidden-game"></div>
+           <div class="game hidden-game"></div>
+           <div class="game hidden-game"></div>
+          </div>
+
+      </div>
+      <button class="show-all-events-btn">
+        Show all games
+        <app-icon
+          [isIcon]="true"
+          [imageName]="'arrow-right'"
+          [width]="10"
+          [height]="10"
+          [isWhite]="true"
+        ></app-icon>
+      </button>
+
+    </div>
+    <div [class.show-displayed]="(isMobile$ | async)" class="casino-mobile">
+      <span class="main-title live">Live games</span>
+      <div class="header">
+        <div (click)="casino = 0" [class.active]="casino === 0" class="option">
+            <span class="title-side">
+             <span class="title">
+               1 X 2
+             </span>
+            </span>
+        </div>
+        <div (click)="casino = 1" [class.active]="casino === 1" class="option">
+            <span class="title-side">
+              <span class="title">
+               Amatic
+             </span>
+            </span>
+        </div>
+        <div (click)="casino = 2" [class.active]="casino === 2" class="option">
+            <span class="title-side">
+              <span class="title">
+               Belatra
+             </span>
+            </span>
+        </div>
+      </div>
+      <div [ngSwitch]="casino" class="game-side">
+        <div *ngSwitchCase="0" class="game-block">
+          <ng-container *ngFor="let game of countries; let i = index">
+            <div *ngIf="i < 6" class="game">
+              <app-icon
+                [isCasino]="true"
+                [imageName]="'fruit'"
+                [width]="200"
+                [height]="150"
+              ></app-icon>
+            </div>
+          </ng-container>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+        </div>
+
+      </div>
+      <button class="show-all-events-btn">
+        Show all games
+        <app-icon
+          [isIcon]="true"
+          [imageName]="'arrow-right'"
+          [width]="10"
+          [height]="10"
+          [isWhite]="true"
+        ></app-icon>
+      </button>
+
+    </div>
+  </div>
+
 </div>

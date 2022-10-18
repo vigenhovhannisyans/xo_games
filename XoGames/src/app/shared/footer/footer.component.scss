@@ -1,0 +1,201 @@
+.footer {
+  $carousel_button_background: rgba(14, 14, 32, 0.7);
+  $right_arrow: '../../../assets/images/icons/arrow-right.svg';
+  $left_arrow: '../../../assets/images/icons/arrow-left.svg';
+  padding: 0 50px 15px 50px;
+  background-color: #151327;
+
+  &.mobile {
+    padding: 20px;
+  }
+
+  .top-side {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &.mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .list-side {
+      width: 60%;
+      justify-content: space-between;
+      display: flex;
+
+      &.mobile {
+        width: 100%;
+      }
+
+      .list-ul {
+        margin-bottom: 20px;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+
+        .list {
+          font-size: 15px;
+          color: white;
+          font-weight: 500;
+          margin-bottom: 10px;
+
+          &.header {
+            color: #807A87;
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .social-media {
+      display: flex;
+      flex-direction: column;
+
+      .follow {
+        color: #807A87;
+        font-weight: 600;
+        font-size: 13px;
+        display: inline-block;
+        margin-bottom: 10px;
+
+        &.mobile {
+          text-align: center;
+        }
+      }
+
+      .circle-side {
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &.mobile {
+          margin-bottom: 20px;
+        }
+
+        .circle {
+          padding: 14px 13px;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background: rgba(62, 59, 84, 0.5);
+          display: block;
+        }
+      }
+    }
+  }
+
+  .slider-side {
+    ::ng-deep {
+      .slick-next {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 44px;
+        height: 44px;
+        background: $carousel_button_background;
+        border-radius: 8px;
+        z-index: 9;
+        left: auto;
+        top: auto;
+        transform: translate(15px, -13px);
+
+        &::before {
+          content: "";
+          background-image: url($right_arrow);
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+
+      .slick-prev {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 44px;
+        height: 44px;
+        background: $carousel_button_background;
+        border-radius: 8px;
+        z-index: 9;
+        right: auto;
+        top: auto;
+        transform: translate(-15px, -13px);
+
+        &::before {
+          content: "";
+          background-image: url($left_arrow);
+          width: 40px;
+          height: 40px;
+          display: block;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+
+    .slick-initialized {
+      .slick-slide {
+        margin: 0 17px;
+      }
+
+      .slick-list {
+        margin: 0 -17px;
+      }
+
+      .slick-slide {
+        background: #29273D;
+        border-radius: 6px;
+        width: 135px;
+        height: 70px;
+        position: relative;
+
+        .slider-img {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 70px;
+        }
+      }
+    }
+    .we-accept{
+      color: #807A87;
+      font-weight: 600;
+      font-size: 14px;
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+  }
+  .bottom-side{
+    margin-top: 25px;
+    .title{
+      font-weight: 600;
+      color: #807A87;
+      font-size: 14px;
+      margin-right: 13px;
+    }
+    .more{
+      color: white;
+      font-weight: 600;
+      font-size: 13px;
+      margin-right: 13px;
+    }
+  }
+
+  @media(max-width: 620px) {
+     .top-side{
+       .list-side{
+
+       }
+     }
+  }
+}

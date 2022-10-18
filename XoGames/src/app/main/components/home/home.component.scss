@@ -740,6 +740,189 @@
     }
   }
 
+  .casino-side{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    &.flexed-to-down{
+      margin-top: 20px !important;
+    }
+    .sides {
+      width: 50%;
+      height: 500px;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+
+        .option {
+          width: max-content;
+          border-radius: 8px;
+          background: rgba(56, 42, 71, 0.8);
+          height: 35px;
+          display: flex;
+          justify-content: center;
+          margin-right: 13px;
+          padding: 15px;
+          &.in-play {
+            width: 173px;
+          }
+
+          &.soccer {
+            background: #0AA92D;
+            width: 100px;
+
+            .title-side {
+              width: 100%;
+              justify-content: space-around;
+
+              .title {
+                font-size: 12px;
+              }
+            }
+          }
+
+          &.active {
+            height: 50px;
+            font-weight: 700;
+            width: 173px;
+            border-radius: 11px 11px 0 0;
+            background-color: white;
+
+            .title-side {
+              width: 100%;
+              justify-content: space-evenly;
+
+              .title {
+                color: black;
+                font-size: 20px;
+              }
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          .title-side {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .title {
+              white-space: nowrap;
+              font-size: 14px;
+              color: white;
+            }
+          }
+        }
+      }
+
+      .content-side {
+        background-color: white;
+        height: 500px;
+        border-radius: 0 11px 11px 11px;
+        overflow-y: auto;
+        padding: 0 28px;
+        &.active {
+          border-radius: 11px;
+        }
+        .popular-title{
+          color: #9D94A6;
+          font-size: 14px;
+          display: inline-block;
+          margin-top: 15px;
+          margin-bottom: 15px;
+
+        }
+        .game-block{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .game{
+            margin-bottom: 15px;
+            width: 157px;
+            height: 123px;
+            border-radius: 9px;
+            &.hidden-game{
+              height: 0;
+            }
+          }
+        }
+
+      }
+    }
+    .casino-mobile{
+      display: none;
+      .main-title{
+        font-size: 26px;
+        color: white;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: inline-block;
+        &.live{
+          margin-top: 50px;
+        }
+      }
+      .header{
+        display: flex;
+        align-items: center;
+      .option {
+        width: max-content;
+        border-radius: 8px;
+        background: rgba(56, 42, 71, 0.8);
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        margin-right: 13px;
+        padding: 15px;
+        .title-side {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .title {
+            white-space: nowrap;
+            font-size: 14px;
+            color: white;
+          }
+        }
+      }
+      }
+      .game-side{
+          .game-block{
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .game{
+              width: 200px;
+              margin-bottom: 15px;
+              &.game-hidden{
+                height: 0 !important;
+              }
+            }
+
+          }
+      }
+      .show-all-events-btn {
+        width: 100%;
+        background: #DE303D;
+        border-radius: 9px;
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 15px;
+        border: 0;
+        height: 40px;
+      }
+    }
+  }
+
+
   @media (max-width: 1400px) {
     .match-side {
       .sides {
@@ -763,6 +946,30 @@
 
         .slick-next {
           transform: translate(-15px, -25px);
+        }
+      }
+    }
+  }
+  @media(max-width: 1215px){
+    .casino-side{
+      .sides{
+        .content-side{
+          .game-block{
+            .game{
+              width: 49%;
+              border-radius: 15px;
+            }
+          }
+        }
+      }
+      .casino-mobile{
+        .game-side{
+        .game-block{
+          .game{
+            width: 49%;
+            border-radius: 15px;
+          }
+          }
         }
       }
     }
