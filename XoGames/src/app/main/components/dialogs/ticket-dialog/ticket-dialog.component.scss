@@ -99,36 +99,23 @@
     padding: 10px;
     border-radius: 0 15px 15px;
     position: relative;
-      &.view{
-        .ticket-block{
-          .winner-side{
-            margin-top: 5px;
-            flex-direction: column;
-            align-items: baseline;
-            .price-and-percent{
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              width: 100%;
-            }
+
+    &.view {
+      .ticket-block {
+        .winner-side {
+          margin-top: 5px;
+          flex-direction: column;
+          align-items: baseline;
+
+          .price-and-percent {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
           }
         }
-
       }
-    .circle {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-156px, -234%);
-      display: block;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: #f2f0fb;
 
-      &.second {
-        transform: translate(143px, -234%);
-      }
     }
 
     &.active {
@@ -155,13 +142,16 @@
         .title-and-check {
           display: flex;
           align-items: center;
-          &.check-bet-title{
+
+          &.check-bet-title {
             flex-direction: column;
             align-items: baseline;
-            .winner-side{
+
+            .winner-side {
               margin-top: 5px;
             }
           }
+
           .accepted {
             color: #807D9B;
             font-weight: 500;

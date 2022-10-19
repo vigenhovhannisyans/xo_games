@@ -49,8 +49,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   openTicketDialog(event: any): void {
     const dialogRef = this._ticketDialog.open(TicketDialogComponent,
       {
-        width: '325px',
-        height: '442px',
+        width: '350px',
+        height: '470px',
         panelClass: 'ticket-dialog',
       });
 
