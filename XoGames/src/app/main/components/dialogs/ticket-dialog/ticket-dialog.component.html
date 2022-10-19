@@ -1,1 +1,155 @@
-<p>ticket-dialog works!</p>
+<div [ngSwitch]="viewOrPutBet" class="ticket">
+  <span class="hole"></span>
+  <div class="header">
+    <div class="title-side">
+      <span [class.active]="viewOrPutBet === 0" (click)="viewOrPutBet = 0" class="title">Ticket <span class="line"></span></span>
+      <span [class.active]="viewOrPutBet === 1" (click)="viewOrPutBet = 1" class="title">Open bets <span class="line"></span></span>
+    </div>
+    <div class="icon">
+      <app-icon
+      [isIcon]="true"
+      [imageName]="'red-settings'"
+      [width]="18"
+      [height]="18"
+      ></app-icon>
+    </div>
+  </div>
+  <div *ngSwitchCase="0" class="body-side">
+    <div class="body-header">
+      <span [class.active]="bet === 0" (click)="bet = 0" class="title">Single Bet</span>
+      <span [class.active]="bet === 1" (click)="bet = 1" class="title">Express</span>
+    </div>
+    <div [ngSwitch]="bet" class="ticket-body">
+      <span class="circle"></span>
+      <span class="circle second"></span>
+      <div [class.active]="bet === 1" class="ticket-block">
+        <div class="header-side">
+          <div class="title-and-check">
+            <mat-checkbox [checked]="bet === 1" class="example-margin"></mat-checkbox>
+            <span class="title">Arsenal vs. Manchester United</span>
+          </div>
+          <div class="trash">
+            <app-icon
+            [imageName]="'trash'"
+            [isIcon]="true"
+            [width]="20"
+            [height]="20"
+            ></app-icon>
+          </div>
+        </div>
+        <div class="winner-side">
+          <span class="winner">Winner - <span class="team">Manchester United</span></span>
+          <span class="bet">29.5</span>
+        </div>
+        <div *ngSwitchCase="0" class="add-bet-side">
+          <div class="bet-side">
+          <div class="dollar">
+            <app-icon
+            [isIcon]="true"
+            [imageName]="'dollar'"
+            [width]="15"
+            [height]="15"
+            ></app-icon>
+          </div>
+          <input type="number" class="take-bet" placeholder="0">
+          <span class="possible">Possible win</span>
+          </div>
+          <span class="win">$ 0</span>
+        </div>
+      </div>
+      <div [class.active]="bet === 1" class="ticket-block">
+        <div class="header-side">
+          <div class="title-and-check">
+            <mat-checkbox [checked]="bet === 1" class="example-margin"></mat-checkbox>
+            <span class="title">Arsenal vs. Manchester United</span>
+          </div>
+          <div class="trash">
+            <app-icon
+              [imageName]="'trash'"
+              [isIcon]="true"
+              [width]="20"
+              [height]="20"
+            ></app-icon>
+          </div>
+        </div>
+        <div class="winner-side">
+          <span class="winner">Winner - <span class="team">Manchester United</span></span>
+          <span class="bet">29.5</span>
+        </div>
+        <div *ngSwitchCase="0" class="add-bet-side">
+          <div class="bet-side">
+            <div class="dollar">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'dollar'"
+                [width]="15"
+                [height]="15"
+              ></app-icon>
+            </div>
+            <input type="number" class="take-bet" placeholder="0">
+            <span class="possible">Possible win</span>
+          </div>
+          <span class="win">$ 0</span>
+        </div>
+      </div>
+      <div [class.express-side]="bet === 1" *ngSwitchCase="1" class="add-bet-side">
+        <span class="express">Express bet *</span>
+        <div class="bet-side">
+          <div class="dollar">
+            <app-icon
+              [isIcon]="true"
+              [imageName]="'dollar'"
+              [width]="15"
+              [height]="15"
+            ></app-icon>
+          </div>
+          <input type="number" class="take-bet" placeholder="0">
+          <span class="possible">Possible win</span>
+        </div>
+        <span class="win">$ 0</span>
+      </div>
+      <button class="place">Place bet</button>
+    </div>
+  </div>
+  <div *ngSwitchCase="1" class="body-side">
+    <div class="body-header">
+      <span [class.active]="bet === 0" (click)="bet = 0" class="title">Single Bet</span>
+      <span [class.active]="bet === 1" (click)="bet = 1" class="title">Express</span>
+    </div>
+    <div [ngSwitch]="bet" class="ticket-body view">
+      <span class="circle"></span>
+      <span class="circle second"></span>
+      <div  class="ticket-block">
+        <div class="header-side">
+          <div class="title-and-check check-bet-title">
+            <span class="accepted">Bet accepted 26.09.2020 16:00</span>
+            <span class="title check-bet">Arsenal vs. Manchester United</span>
+          </div>
+        </div>
+        <div class="winner-side">
+          <span class="winner">Winner - <span class="team">Manchester United</span></span>
+          <div class="price-and-percent">
+          <span class="bet-price">You bet &nbsp; $15</span> <span class="bet">29.5</span>
+          </div>
+          </div>
+
+      </div>
+      <div  class="ticket-block">
+        <div class="header-side">
+          <div class="title-and-check check-bet-title">
+            <span class="accepted">Bet accepted 26.09.2020 16:00</span>
+            <span class="title check-bet">Arsenal vs. Manchester United</span>
+          </div>
+        </div>
+        <div class="winner-side">
+          <span class="winner">Winner - <span class="team">Manchester United</span></span>
+          <div class="price-and-percent">
+          <span class="bet-price">You bet &nbsp; $15</span> <span class="bet">29.5</span>
+          </div>
+          </div>
+
+      </div>
+      <button class="place">Full cache out &nbsp; $ 35</button>
+    </div>
+  </div>
+</div>

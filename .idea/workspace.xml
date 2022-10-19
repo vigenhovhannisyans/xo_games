@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a2aac3ba-144a-4292-a622-1cde16da5d92" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XoGames/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/main.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/main.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XoGames/src/app/shared/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/shared/material.module.ts" afterDir="false" />
@@ -22,92 +22,219 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home-sliders/home-slider.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="291" column="38" selection-start-line="291" selection-start-column="38" selection-end-line="291" selection-end-column="38" />
-              <folding>
-                <element signature="n#div#1;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#2;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#button#0;n#div#2;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#span#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#button#0;n#div#3;n#div#2;n#div#0;n#!!top" />
-                <element signature="n#div#0;n#div#3;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#div#3;n#div#0;n#!!top" />
-                <element signature="n#div#3;n#div#3;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="307">
+                  <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="156">
+                  <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
+                  <folding>
+                    <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#app-icon#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#app-icon#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                    <element signature="e#4972#4978#0" expanded="true" />
+                    <element signature="e#5610#5616#0" expanded="true" />
+                    <element signature="e#6315#6321#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/material.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/shared.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="293">
+                  <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/main.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="456">
+                  <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/main.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="31" selection-start-column="31" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="232">
+                  <caret line="338" column="1" selection-start-line="338" selection-start-column="1" selection-end-line="338" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="216">
+                  <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="21" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="279" column="34" selection-start-line="279" selection-start-column="17" selection-end-line="279" selection-end-column="34" />
+                  <folding>
+                    <element signature="n#div#1;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#span#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#2;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#0;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#3;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#4;n#div#1;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#1;n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#button#0;n#div#2;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#0;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#3;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#4;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#span#1;n#div#0;n#div#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#1;n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#button#0;n#div#3;n#div#2;n#div#0;n#!!top" />
+                    <element signature="n#div#0;n#div#3;n#div#0;n#!!top" />
+                    <element signature="n#div#1;n#div#3;n#div#0;n#!!top" />
+                    <element signature="n#div#3;n#div#3;n#div#0;n#!!top" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/styles.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="402">
+                  <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="104" column="28" selection-start-line="104" selection-start-column="28" selection-end-line="104" selection-end-column="28" />
+                  <folding>
+                    <element signature="e#1850#1872#0" />
+                    <element signature="e#2646#3516#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/XoGames/src/styles.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="360">
+                  <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,11 +245,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>auth</find>
-      <find>isMobile$</find>
-      <find>this._mobileService.isMobile$</find>
-      <find>slid</find>
-      <find>slick-next</find>
       <find>time</find>
       <find>live</find>
       <find>background: rgba(56, 42, 71, 0.8);</find>
@@ -131,7 +253,6 @@
       <find>DecimalPipe</find>
       <find>soccer</find>
       <find>[imageName]=&quot;'soccer'&quot;</find>
-      <find>ngSwitchCase</find>
       <find>ngswitchcase</find>
       <find>all</find>
       <find>main-title</find>
@@ -144,6 +265,16 @@
       <find>arrow-right-black</find>
       <find>.sides</find>
       <find>tick</find>
+      <find>ngswitch</find>
+      <find>[ngswitch]</find>
+      <find>*ngswitchcase</find>
+      <find>ticket-body</find>
+      <find>[ng</find>
+      <find>add-bet-side</find>
+      <find>val</find>
+      <find>ngSwitchCase</find>
+      <find>ticket-block</find>
+      <find>winner-side</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,17 +316,20 @@
         <option value="$PROJECT_DIR$/XoGames/src/app/core/models/bet-i.ts" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/main.component.html" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/main.component.scss" />
-        <option value="$PROJECT_DIR$/XoGames/src/styles.scss" />
         <option value="$PROJECT_DIR$/XoGames/src/app/app.component.scss" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.scss" />
         <option value="$PROJECT_DIR$/XoGames/src/app/core/models/match-i.ts" />
-        <option value="$PROJECT_DIR$/XoGames/src/app/main/main.module.ts" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home-slider.ts" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home-sliders/home-slider.ts" />
-        <option value="$PROJECT_DIR$/XoGames/src/app/shared/material.module.ts" />
-        <option value="$PROJECT_DIR$/XoGames/src/app/shared/shared.module.ts" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/XoGames/src/styles.scss" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/main/main.module.ts" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/shared/shared.module.ts" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/shared/material.module.ts" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.ts" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.scss" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.html" />
       </list>
     </option>
   </component>
@@ -253,15 +387,6 @@
               <item name="XoGames" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="xo_games" type="b2602c69:ProjectViewProjectNode" />
-              <item name="xo_games" type="462c0819:PsiDirectoryNode" />
-              <item name="XoGames" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -282,6 +407,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xo_games" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xo_games" type="462c0819:PsiDirectoryNode" />
+              <item name="XoGames" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="ticket-dialog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xo_games" type="b2602c69:ProjectViewProjectNode" />
@@ -401,18 +537,19 @@
       <updated>1665990396546</updated>
       <workItem from="1665990398949" duration="23549000" />
       <workItem from="1666069483334" duration="24813000" />
-      <workItem from="1666098578852" duration="2104000" />
+      <workItem from="1666098578852" duration="2728000" />
+      <workItem from="1666156028912" duration="8716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50466000" />
+    <option name="totallyTimeSpent" value="59806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17228661" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21917808" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -436,21 +573,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/XoGames/src/assets/images/icons/facebook.svg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/header/header.component.spec.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/live-point/live-point.component.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/live-point/live-point.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -701,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -715,13 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/main.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -745,10 +853,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home-sliders/home-slider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/main.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="31" selection-start-column="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/main.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="456">
+          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -757,8 +896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/shared.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        <state relative-caret-position="293">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -767,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/shared/material.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="360">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -777,8 +916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="291" column="38" selection-start-line="291" selection-start-column="38" selection-end-line="291" selection-end-column="38" />
+        <state relative-caret-position="300">
+          <caret line="279" column="34" selection-start-line="279" selection-start-column="17" selection-end-line="279" selection-end-column="34" />
           <folding>
             <element signature="n#div#1;n#div#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
@@ -836,19 +975,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home-sliders/home-slider.ts">
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        <state relative-caret-position="216">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+        <state relative-caret-position="232">
+          <caret line="338" column="1" selection-start-line="338" selection-start-column="1" selection-end-line="338" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/dialogs/ticket-dialog/ticket-dialog.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="136" column="11" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
           <folding>
-            <element signature="e#0#59#0" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#app-icon#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#app-icon#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#1;n#div#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+            <element signature="e#4972#4978#0" expanded="true" />
+            <element signature="e#5610#5616#0" expanded="true" />
+            <element signature="e#6315#6321#0" expanded="true" />
           </folding>
         </state>
       </provider>

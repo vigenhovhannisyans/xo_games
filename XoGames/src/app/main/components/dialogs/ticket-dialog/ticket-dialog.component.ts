@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ticket-dialog.component.scss']
 })
 export class TicketDialogComponent implements OnInit {
-
+  public bet = 0;
+  public viewOrPutBet = 0;
   constructor() { }
 
   ngOnInit(): void {

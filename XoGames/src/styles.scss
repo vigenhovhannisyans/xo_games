@@ -10,5 +10,13 @@ body {
   background-color: #151327 !important;
 }
 
+.ticket-dialog {
+  .mat-dialog-container {
+    background: #F2F0FB;
+    border-radius: 12px;
+    padding: 20px 13px;
+  }
+}
+
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';

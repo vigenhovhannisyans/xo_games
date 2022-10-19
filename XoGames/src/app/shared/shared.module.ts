@@ -31,6 +31,7 @@ import {MaterialModule} from "./material.module";
     IconComponent,
     LivePointComponent,
     SlickCarouselModule,
+    MaterialModule
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,345 @@
+.ticket {
+  position: relative;
+
+  .hole {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #8c8c8c;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-36px, 45px);
+
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icon {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .title {
+      color: #807D9B;
+      font-weight: 700;
+      font-size: 16px;
+      margin-right: 20px;
+      position: relative;
+      transition: all .5s;
+
+      &:hover {
+        color: black;
+        cursor: pointer;
+
+        .line {
+          width: 100%;
+        }
+      }
+
+      .line {
+        transition: all .5s;
+        position: absolute;
+        width: 0;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        background-color: #DE303D;
+        transform: translateY(10px);
+      }
+
+      &.active {
+        color: black;
+
+        .line {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .body-side {
+    .body-header {
+      margin-top: 40px;
+
+      .title {
+        color: #807D9B;
+        font-weight: 600;
+        font-size: 15px;
+        margin-right: 5px;
+        border-radius: 12px 12px 0 0;
+        transition: all .5s;
+        padding: 12px;
+
+        &:hover {
+          color: black;
+          background: white;
+          padding: 12px;
+          cursor: pointer;
+        }
+
+        &.active {
+          color: black;
+          background: white;
+        }
+      }
+    }
+  }
+
+  .ticket-body {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0 15px 15px;
+    position: relative;
+      &.view{
+        .ticket-block{
+          .winner-side{
+            margin-top: 5px;
+            flex-direction: column;
+            align-items: baseline;
+            .price-and-percent{
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+            }
+          }
+        }
+
+      }
+    .circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-156px, -234%);
+      display: block;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #f2f0fb;
+
+      &.second {
+        transform: translate(143px, -234%);
+      }
+    }
+
+    &.active {
+      border-radius: 15px;
+    }
+
+    .ticket-block {
+      margin-bottom: 15px;
+      padding: 8px 12px;
+      width: 100%;
+      height: 109px;
+      background: rgba(242, 240, 251, 0.5);
+      border-radius: 7px;
+
+      &.active {
+        height: 80px;
+      }
+
+      .header-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title-and-check {
+          display: flex;
+          align-items: center;
+          &.check-bet-title{
+            flex-direction: column;
+            align-items: baseline;
+            .winner-side{
+              margin-top: 5px;
+            }
+          }
+          .accepted {
+            color: #807D9B;
+            font-weight: 500;
+            font-size: 13px;
+          }
+
+          .title {
+            margin-left: 5px;
+            font-weight: 600;
+            color: #151428;
+
+            &.check-bet {
+              margin-left: 0;
+            }
+          }
+        }
+
+        .trash {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+
+      .winner-side {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .bet-price {
+          font-weight: 600;
+          color: black;
+        }
+
+        .winner {
+          color: #807D9B;
+          font-weight: 500;
+          font-size: 13px;
+
+          .team {
+            color: #151428;
+            font-size: 13px;
+            font-weight: 500;
+          }
+        }
+
+        .bet {
+          width: 41px;
+          height: 25px;
+          display: block;
+          padding: 3px;
+          text-align: center;
+          color: #151428;
+          font-weight: 700;
+          font-size: 14px;
+          background: #a6a4b92e;
+          border-radius: 5px;
+        }
+      }
+
+      .add-bet-side {
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        margin-top: 6px;
+        margin-bottom: 10px;
+
+        .bet-side {
+          .dollar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform: translate(8px, 5px);
+          }
+
+          .take-bet {
+            width: 80px;
+            height: 33px;
+            outline: none;
+            background: #FFFFFF;
+            border: 0.6px solid rgba(128, 125, 155, 0.6);
+            border-radius: 7px;
+            color: #151428;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 0 7px 0 25px;
+          }
+
+          .possible {
+            color: #807D9B;
+            font-weight: 500;
+            font-size: 13px;
+            margin-left: 7px;
+          }
+        }
+
+        .win {
+          color: #807D9B;
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .add-bet-side {
+      position: relative;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      margin-top: 6px;
+      margin-bottom: 10px;
+
+      &.express-side {
+        margin-top: 30px;
+      }
+
+      .express {
+        font-weight: 700;
+        font-size: 15px;
+        color: #DE303D;
+        position: absolute;
+        transform: translateY(-32px);
+      }
+
+      .bet-side {
+        .dollar {
+          position: absolute;
+          left: 0;
+          top: 0;
+          transform: translate(8px, 5px);
+        }
+
+        .take-bet {
+          width: 80px;
+          height: 33px;
+          outline: none;
+          background: #FFFFFF;
+          border: 0.6px solid rgba(128, 125, 155, 0.6);
+          border-radius: 7px;
+          color: #151428;
+          font-weight: 700;
+          font-size: 14px;
+          padding: 0 7px 0 25px;
+        }
+
+        .possible {
+          color: #807D9B;
+          font-weight: 500;
+          font-size: 13px;
+          margin-left: 7px;
+        }
+      }
+
+      .win {
+        color: #807D9B;
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+
+    .place {
+      background: #DE303D;
+      border-radius: 8px;
+      height: 42px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      border: none;
+      font-weight: 700;
+    }
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
