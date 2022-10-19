@@ -1,4 +1,4 @@
-export interface MatchI {
-  id: string;
-
+export interface MatchI<T> {
+    inPlay: T;
+    prematch: T
 }

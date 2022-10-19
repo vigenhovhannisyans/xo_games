@@ -1,4 +1,5 @@
-export const enum SportTypeE {
+export enum SportTypeE {
   SOCCER = 'soccer',
-  TENNIS = 'tennis'
+  TENNIS = 'tennis',
+  BASKETBALL = 'basketball'
 }

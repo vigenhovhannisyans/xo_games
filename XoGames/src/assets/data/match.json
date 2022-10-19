@@ -1,0 +1,100 @@
+{
+  "inPlay": {
+    "all": [
+      {
+        "id": 1,
+        "time": "Wed Oct 19 2022 11:55:43 GMT+0400",
+        "type": "soccer",
+        "teams": [
+          {
+            "id": 1,
+            "name": "Manchester United",
+            "imageUrl": "manchester"
+          },
+          {
+            "id": 3,
+            "name": "Barcelona FC",
+            "imageUrl": "barcelona"
+          }
+        ],
+        "betOneX": 1.6,
+        "betX": 2.6,
+        "betTwoX": 1.5,
+        "percent": 9.1
+      },
+      {
+        "id": 2,
+        "time": "Wed Oct 29 2022 11:55:43 GMT+0400",
+        "type": "soccer",
+        "teams": [
+          {
+            "id": 2,
+            "name": "Arsenal",
+            "imageUrl": "arsenal"
+          },
+          {
+            "id": 4,
+            "name": "Juventus",
+            "imageUrl": "juventus"
+          }
+        ],
+        "betOneX": 1.6,
+        "betX": 2.6,
+        "betTwoX": 1.5,
+        "percent": 9.1
+      }
+    ],
+    "soccer": [
+
+    ]
+  },
+  "prematch": {
+    "all": [
+      {
+        "id": 1,
+        "time": "Wed Oct 19 2022 11:55:43 GMT+0400",
+        "type": "soccer",
+        "teams": [
+          {
+            "id": 1,
+            "name": "Manchester United",
+            "imageUrl": "manchester"
+          },
+          {
+            "id": 3,
+            "name": "Barcelona FC",
+            "imageUrl": "barcelona"
+          }
+        ],
+        "betOneX": 1.6,
+        "betX": 2.6,
+        "betTwoX": 1.5,
+        "percent": 9.1
+      },
+      {
+        "id": 2,
+        "time": "Wed Oct 29 2022 11:55:43 GMT+0400",
+        "type": "soccer",
+        "teams": [
+          {
+            "id": 2,
+            "name": "Arsenal",
+            "imageUrl": "arsenal"
+          },
+          {
+            "id": 4,
+            "name": "Juventus",
+            "imageUrl": "juventus"
+          }
+        ],
+        "betOneX": 1.6,
+        "betX": 2.6,
+        "betTwoX": 1.5,
+        "percent": 9.1
+      }
+    ],
+    "basketBall": [
+
+    ]
+  }
+}
