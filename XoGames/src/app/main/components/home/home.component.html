@@ -81,7 +81,7 @@
     </ngx-slick-carousel>
   </div>
   <div [class.flexed-to-down]="(isMobile$ | async)" class="match-side">
-    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="inPlaySwitch" class="sides">
+    <div [class.displayed]="(isMobile$ | async)" class="sides">
       <div class="header">
         <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.ALL);inPlaySwitch = 0" [class.active]="inPlaySwitch === 0" class="option in-play">
             <span class="title-side">
@@ -201,7 +201,7 @@
         </table>
       </div>
     </div>
-    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="preMatchSwitch" class="sides">
+    <div [class.displayed]="(isMobile$ | async)" class="sides">
       <div class="header">
         <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.ALL);preMatchSwitch = 0" [class.active]="preMatchSwitch === 0" class="option in-play">
             <span class="title-side">
@@ -277,29 +277,29 @@
             <th scope="col" class="table-header bet-col">Bets</th>
           </tr>
           </thead>
-          <tbody *ngSwitchCase="0" class="body">
-          <tr class="body-row" *ngFor="let match of countries; index as i">
-            <td class="time"><span class="date">8 Jan</span> <span class="clock">20:00</span></td>
+          <tbody class="body">
+          <tr class="body-row" *ngFor="let match of preMatches; index as i">
+            <td class="time"><span class="date">{{match.day | date:'d MMM'}}</span> <span class="clock">{{match.hour | date:'H:mm'}}</span></td>
             <td class="match">
               <span class="team">
-                <span class="title">Switzerland (Apollo)</span>
+                <span class="title">{{match.firstTeam.name}}</span>
               </span>
               <span class="team">
-                <span class="title">Australia (Kubrik)</span>
+                <span class="title">{{match.secondTeam.name}}</span>
               </span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">{{match.ratioOne}}</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">{{match.ratioX}}</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">1.9</span>
+              <span (click)="openTicketDialog(match)" class="column">{{match.ratioTwo}}</span>
             </td>
             <td class="bets light-bet">
               <span class="column">
-                1.9
+                {{match.ratioBet}}
               </span>
             </td>
           </tr>

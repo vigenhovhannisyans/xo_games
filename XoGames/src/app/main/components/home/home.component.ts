@@ -53,6 +53,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     ).subscribe(res => {
       this.matches = res;
       this.inPlayMatches = res.filter(match => match.matchType === this.getMatchTypeE.IN_PLAY);
+      this.preMatches = res.filter(match => match.matchType === this.getMatchTypeE.PREMATCH);
     })
   }
 

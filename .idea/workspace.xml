@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2aac3ba-144a-4292-a622-1cde16da5d92" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -15,22 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            <state relative-caret-position="252">
+              <caret line="55" column="91" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
                 <element signature="n#!!block;n#ngOnInit#0;n#HomeComponent#0" />
-                <element signature="n#!!block;n#getSoccer#0;n#HomeComponent#0" />
                 <element signature="n#!!block;n#getSportTypeE#0;n#HomeComponent#0" />
                 <element signature="n#!!block;n#getSportTypeE#1;n#HomeComponent#0" />
                 <element signature="n#!!block;n#openTicketDialog#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#fetchMatches#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#_getMatchByTypeAndSportType#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#_addMatchesIntoArray#0;n#HomeComponent#0" />
                 <element signature="n#!!block;n#ngOnDestroy#0;n#HomeComponent#0" />
-                <element signature="n#!!block;n#getSportByType#0;n#HomeComponent#0" />
-                <element signature="n#!!block;n#_getInPlayMatches#0;n#HomeComponent#0" />
-                <element signature="n#!!block;n#addMatchesIntoArray#0;n#HomeComponent#0" />
               </folding>
             </state>
           </provider>
@@ -49,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="252" column="57" selection-start-line="252" selection-start-column="57" selection-end-line="252" selection-end-column="57" />
+            <state relative-caret-position="247">
+              <caret line="289" column="17" selection-start-line="289" selection-start-column="17" selection-end-line="289" selection-end-column="17" />
               <folding>
                 <element signature="n#div#1;n#div#0;n#!!top" />
                 <element signature="n#ngx-slick-carousel#0;n#div#1;n#div#0;n#!!top" />
@@ -63,6 +63,7 @@
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
+                <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#app-icon#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
@@ -72,6 +73,11 @@
                 <element signature="n#div#2;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+                <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" />
+                <element signature="n#span#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" />
+                <element signature="n#div#2;n#div#2;n#div#0;n#!!top" />
+                <element signature="n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+                <element signature="n#div#3;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#div#4;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#span#0;n#div#3;n#div#2;n#div#0;n#!!top" />
                 <element signature="n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
@@ -205,9 +211,9 @@
         <option value="$PROJECT_DIR$/XoGames/src/app/core/models/match-i.ts" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.scss" />
         <option value="$PROJECT_DIR$/XoGames/src/app/core/enums/sport-type.enum.ts" />
-        <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" />
         <option value="$PROJECT_DIR$/XoGames/src/assets/data/match.json" />
         <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts" />
+        <option value="$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html" />
       </list>
     </option>
   </component>
@@ -445,13 +451,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86821000" />
+    <option name="totallyTimeSpent" value="87509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21654373" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21654373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -464,7 +470,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -894,10 +900,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/core/enums/sport-type.enum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="55" column="91" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="n#!!block;n#ngOnInit#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#getSportTypeE#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#getSportTypeE#1;n#HomeComponent#0" />
+            <element signature="n#!!block;n#openTicketDialog#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#fetchMatches#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#_getMatchByTypeAndSportType#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#_addMatchesIntoArray#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#ngOnDestroy#0;n#HomeComponent#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="252" column="57" selection-start-line="252" selection-start-column="57" selection-end-line="252" selection-end-column="57" />
+        <state relative-caret-position="247">
+          <caret line="289" column="17" selection-start-line="289" selection-start-column="17" selection-end-line="289" selection-end-column="17" />
           <folding>
             <element signature="n#div#1;n#div#0;n#!!top" />
             <element signature="n#ngx-slick-carousel#0;n#div#1;n#div#0;n#!!top" />
@@ -907,6 +938,7 @@
             <element signature="n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" />
+            <element signature="n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
             <element signature="n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
             <element signature="n#app-icon#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
             <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#2;n#div#0;n#!!top" />
@@ -916,6 +948,11 @@
             <element signature="n#div#2;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#3;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#4;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" />
+            <element signature="n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" />
+            <element signature="n#span#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#2;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#0;n#!!top" />
+            <element signature="n#div#2;n#div#2;n#div#2;n#div#0;n#!!top" />
+            <element signature="n#div#3;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#4;n#div#1;n#div#3;n#div#2;n#div#0;n#!!top" />
             <element signature="n#span#0;n#div#3;n#div#2;n#div#0;n#!!top" />
             <element signature="n#div#2;n#div#3;n#div#2;n#div#0;n#!!top" />
@@ -935,32 +972,6 @@
             <element signature="n#div#0;n#div#3;n#div#0;n#!!top" />
             <element signature="n#div#1;n#div#3;n#div#0;n#!!top" />
             <element signature="n#div#3;n#div#3;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/core/enums/sport-type.enum.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="n#!!block;n#ngOnInit#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#getSoccer#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#getSportTypeE#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#getSportTypeE#1;n#HomeComponent#0" />
-            <element signature="n#!!block;n#openTicketDialog#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#ngOnDestroy#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#getSportByType#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#_getInPlayMatches#0;n#HomeComponent#0" />
-            <element signature="n#!!block;n#addMatchesIntoArray#0;n#HomeComponent#0" />
           </folding>
         </state>
       </provider>
