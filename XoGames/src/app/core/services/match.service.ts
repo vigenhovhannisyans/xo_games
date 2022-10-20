@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import {environment} from "../../../environments/environment";
-import {Observable} from "rxjs";
 import {MatchI} from "../models/match-i";
+import {Observable} from "rxjs";
+import {environment} from "../../../environments/environment";
 import {HttpClient} from "@angular/common/http";
-import {MatchDataI} from "../models/match-data-i";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +13,7 @@ export class MatchService {
     private http: HttpClient
   ) { }
 
-  getMatches(): Observable<MatchI<MatchDataI>>{
-    return this.http.get<MatchI<MatchDataI>>(`${this.API_URL}/match.json`)
+  getSoccer(): Observable<MatchI[]> {
+    return this.http.get<MatchI[]>(`${this.API_URL}/match.json`)
   }
 }

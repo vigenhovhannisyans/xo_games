@@ -34,8 +34,8 @@
 
   <div class="soccer-slider">
     <span class="popular-matches">Popular matches soon</span>
-    <ngx-slick-carousel class="carousel" [config]="soccerSliderConfig">
-      <ng-container *ngFor="let soccer of soccerMatches">
+    <ngx-slick-carousel class="carousel" [config]="matchSliderConfig">
+      <ng-container *ngFor="let match of matches">
         <div ngxSlickItem class="slide">
           <span class="circle top"></span>
           <span class="circle bottom"></span>
@@ -51,29 +51,29 @@
             <div class="team">
               <div class="icon">
                 <app-icon
-                  [imageName]="soccer.firstTeam.imageURL"
+                  [imageName]="match.firstTeam.imageURL"
                   [isSoccer]="true"
                   [width]="41"
                   [height]="41"
                 ></app-icon>
               </div>
-              <span class="title">{{soccer.firstTeam.name}}</span>
+              <span class="title">{{match.firstTeam.name}}</span>
             </div>
             <div class="time">
-              <span class="date">{{soccer.day | date:'MMM d'}}</span>
-              <span class="hour">{{soccer.hour | date:'h:mm'}}</span>
+              <span class="date">{{match.day | date:'MMM d'}}</span>
+              <span class="hour">{{match.hour | date:'h:mm'}}</span>
             </div>
 
             <div class="team">
               <div class="icon">
                 <app-icon
-                  [imageName]="soccer.secondTeam.imageURL"
+                  [imageName]="match.secondTeam.imageURL"
                   [isSoccer]="true"
                   [width]="41"
                   [height]="41"
                 ></app-icon>
               </div>
-              <span class="title">{{soccer.secondTeam.name}}</span>
+              <span class="title">{{match.secondTeam.name}}</span>
             </div>
           </div>
         </div>
@@ -81,72 +81,72 @@
     </ngx-slick-carousel>
   </div>
   <div [class.flexed-to-down]="(isMobile$ | async)" class="match-side">
-    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="inPlay" class="sides">
+    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="inPlaySwitch" class="sides">
       <div class="header">
-        <div (click)="inPlay = 0" [class.active]="inPlay === 0" class="option in-play">
+        <div (click)="inPlaySwitch = 0" [class.active]="inPlaySwitch === 0" class="option in-play">
             <span class="title-side">
              <span class="title">In Play</span>
               <app-live-point></app-live-point>
             </span>
         </div>
-        <div (click)="inPlay = 1" [class.active]="inPlay === 1" class="option soccer">
+        <div (click)="inPlaySwitch = 1" [class.active]="inPlaySwitch === 1" class="option soccer">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'soccer'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(inPlay !== 1)"
+                [isWhite]="(inPlaySwitch !== 1)"
               ></app-icon>
              <span class="title">
                Soccer
              </span>
             </span>
         </div>
-        <div (click)="inPlay = 2" [class.active]="inPlay === 2" class="option">
+        <div (click)="inPlaySwitch = 2" [class.active]="inPlaySwitch === 2" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'tennis'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(inPlay !== 2)"
+                [isWhite]="(inPlaySwitch !== 2)"
               ></app-icon>
-              <span [class.displayed]="inPlay !== 2" class="title">
+              <span [class.displayed]="inPlaySwitch !== 2" class="title">
                Tennis
              </span>
             </span>
         </div>
-        <div (click)="inPlay = 3" [class.active]="inPlay === 3" class="option">
+        <div (click)="inPlaySwitch = 3" [class.active]="inPlaySwitch === 3" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'boxing'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(inPlay !== 3)"
+                [isWhite]="(inPlaySwitch !== 3)"
               ></app-icon>
-              <span [class.displayed]="inPlay !== 3" class="title">
+              <span [class.displayed]="inPlaySwitch !== 3" class="title">
                Boxing
              </span>
             </span>
         </div>
-        <div (click)="inPlay = 4" [class.active]="inPlay === 4" class="option">
+        <div (click)="inPlaySwitch = 4" [class.active]="inPlaySwitch === 4" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'basketball'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(inPlay !== 4)"
+                [isWhite]="(inPlaySwitch !== 4)"
               ></app-icon>
-              <span [class.displayed]="inPlay !== 4" class="title">
+              <span [class.displayed]="inPlaySwitch !== 4" class="title">
                Basketball
              </span>
             </span>
         </div>
       </div>
-      <div [class.active]="inPlay !== 0" class="content-side">
+      <div [class.active]="inPlaySwitch !== 0" class="content-side">
         <table class="table">
           <thead class="head">
           <tr class="t-row">
@@ -201,71 +201,71 @@
         </table>
       </div>
     </div>
-    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="preMatch" class="sides">
+    <div [class.displayed]="(isMobile$ | async)" [ngSwitch]="preMatchSwitch" class="sides">
       <div class="header">
-        <div (click)="preMatch = 0" [class.active]="preMatch === 0" class="option in-play">
+        <div (click)="preMatchSwitch = 0" [class.active]="preMatchSwitch === 0" class="option in-play">
             <span class="title-side">
              <span class="title">Prematch</span>
             </span>
         </div>
-        <div (click)="preMatch = 1" [class.active]="preMatch === 1" class="option soccer">
+        <div (click)="preMatchSwitch = 1" [class.active]="preMatchSwitch === 1" class="option soccer">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'soccer'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(preMatch !== 1)"
+                [isWhite]="(preMatchSwitch !== 1)"
               ></app-icon>
              <span class="title">
                Soccer
              </span>
             </span>
         </div>
-        <div (click)="preMatch = 2" [class.active]="preMatch === 2" class="option">
+        <div (click)="preMatchSwitch = 2" [class.active]="preMatchSwitch === 2" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'tennis'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(preMatch !== 2)"
+                [isWhite]="(preMatchSwitch !== 2)"
               ></app-icon>
-              <span [class.displayed]="preMatch !== 2" class="title">
+              <span [class.displayed]="preMatchSwitch !== 2" class="title">
                Tennis
              </span>
             </span>
         </div>
-        <div (click)="preMatch = 3" [class.active]="preMatch === 3" class="option">
+        <div (click)="preMatchSwitch = 3" [class.active]="preMatchSwitch === 3" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'boxing'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(preMatch !== 3)"
+                [isWhite]="(preMatchSwitch !== 3)"
               ></app-icon>
-              <span [class.displayed]="preMatch !== 3" class="title">
+              <span [class.displayed]="preMatchSwitch !== 3" class="title">
                Boxing
              </span>
             </span>
         </div>
-        <div (click)="preMatch = 4" [class.active]="preMatch === 4" class="option">
+        <div (click)="preMatchSwitch = 4" [class.active]="preMatchSwitch === 4" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
                 [imageName]="'basketball'"
                 [width]="20"
                 [height]="20"
-                [isWhite]="(preMatch !== 4)"
+                [isWhite]="(preMatchSwitch !== 4)"
               ></app-icon>
-              <span [class.displayed]="preMatch !== 4" class="title">
+              <span [class.displayed]="preMatchSwitch !== 4" class="title">
                Basketball
              </span>
             </span>
         </div>
       </div>
-      <div [class.active]="preMatch !== 0" class="content-side">
+      <div [class.active]="preMatchSwitch !== 0" class="content-side">
         <table class="table">
           <thead class="head">
           <tr class="t-row">
@@ -315,7 +315,7 @@
         </span>
       </div>
       <div class="categories-side">
-        <div (click)="inPlay = 0" [ngClass]="{'active':inPlay===0, 'soccer':inPlay === 0}" class="category">
+        <div (click)="inPlaySwitch = 0" [ngClass]="{'active':inPlaySwitch===0, 'soccer':inPlaySwitch === 0}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'soccer'"
@@ -325,7 +325,7 @@
           ></app-icon>
           <div class="title">Soccer</div>
         </div>
-        <div (click)="inPlay = 1" [ngClass]="{'active':inPlay===1}" class="category">
+        <div (click)="inPlaySwitch = 1" [ngClass]="{'active':inPlaySwitch===1}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'basketball'"
@@ -335,7 +335,7 @@
           ></app-icon>
           <div class="title">Basketball</div>
         </div>
-        <div (click)="inPlay = 2" [ngClass]="{'active':inPlay===2}" class="category">
+        <div (click)="inPlaySwitch = 2" [ngClass]="{'active':inPlaySwitch===2}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'tennis'"
@@ -345,7 +345,7 @@
           ></app-icon>
           <div class="title">Tennis</div>
         </div>
-        <div (click)="inPlay = 3" [ngClass]="{'active':inPlay===3}" class="category">
+        <div (click)="inPlaySwitch = 3" [ngClass]="{'active':inPlaySwitch===3}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'boxing'"
@@ -355,7 +355,7 @@
           ></app-icon>
           <div class="title">Boxing</div>
         </div>
-        <div (click)="inPlay = 4" [ngClass]="{'active':inPlay===4}" class="category">
+        <div (click)="inPlaySwitch = 4" [ngClass]="{'active':inPlaySwitch===4}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'volleyball'"
@@ -457,10 +457,10 @@
     </div>
     <div [class.show-displayed]="(isMobile$ | async)" class="in-play-mobile">
       <div class="title-side">
-        <span class="title">Prematch</span>
+        <span class="title">preMatchSwitch</span>
       </div>
       <div class="categories-side">
-        <div (click)="preMatch = 0" [ngClass]="{'active':preMatch===0, 'soccer':preMatch === 0}" class="category">
+        <div (click)="preMatchSwitch = 0" [ngClass]="{'active':preMatchSwitch===0, 'soccer':preMatchSwitch === 0}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'soccer'"
@@ -470,7 +470,7 @@
           ></app-icon>
           <div class="title">Soccer</div>
         </div>
-        <div (click)="preMatch = 1" [ngClass]="{'active':preMatch===1}" class="category">
+        <div (click)="preMatchSwitch = 1" [ngClass]="{'active':preMatchSwitch===1}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'basketball'"
@@ -480,7 +480,7 @@
           ></app-icon>
           <div class="title">Basketball</div>
         </div>
-        <div (click)="preMatch = 2" [ngClass]="{'active':preMatch===2}" class="category">
+        <div (click)="preMatchSwitch = 2" [ngClass]="{'active':preMatchSwitch===2}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'tennis'"
@@ -490,7 +490,7 @@
           ></app-icon>
           <div class="title">Tennis</div>
         </div>
-        <div (click)="preMatch = 3" [ngClass]="{'active':preMatch===3}" class="category">
+        <div (click)="preMatchSwitch = 3" [ngClass]="{'active':preMatchSwitch===3}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'boxing'"
@@ -500,7 +500,7 @@
           ></app-icon>
           <div class="title">Boxing</div>
         </div>
-        <div (click)="preMatch = 4" [ngClass]="{'active':preMatch===4}" class="category">
+        <div (click)="preMatchSwitch = 4" [ngClass]="{'active':preMatchSwitch===4}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'volleyball'"

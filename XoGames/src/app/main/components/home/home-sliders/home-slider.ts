@@ -10,7 +10,7 @@ export const HomeSecondSlider = [
   {img: "../../../../assets/images/covers/slider-1.svg"},
 ];
 
-export const SoccerSliderConfig = {
+export const MatchSliderConfig = {
   "slidesToShow": 5,
   "slidesToScroll": 1,
   responsive: [
