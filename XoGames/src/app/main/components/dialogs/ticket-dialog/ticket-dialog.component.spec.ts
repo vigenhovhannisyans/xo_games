@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TicketDialogComponent } from './ticket-dialog.component';
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe('TicketDialogComponent', () => {
   let component: TicketDialogComponent;
@@ -8,7 +9,8 @@ describe('TicketDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TicketDialogComponent ]
+      declarations: [ TicketDialogComponent ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
 

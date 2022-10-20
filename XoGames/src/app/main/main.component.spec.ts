@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainComponent } from './main.component';
+import {SharedModule} from "../shared/shared.module";
+import {CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -8,7 +10,9 @@ describe('MainComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ MainComponent ],
+      imports: [SharedModule],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
     .compileComponents();
 
