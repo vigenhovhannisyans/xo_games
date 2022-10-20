@@ -18,14 +18,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
+            <state relative-caret-position="105">
+              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
+                <element signature="n#!!block;n#ngOnInit#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#getSoccer#0;n#HomeComponent#0" />
                 <element signature="n#!!block;n#getSportTypeE#0;n#HomeComponent#0" />
                 <element signature="n#!!block;n#getSportTypeE#1;n#HomeComponent#0" />
                 <element signature="n#!!block;n#openTicketDialog#0;n#HomeComponent#0" />
                 <element signature="n#!!block;n#ngOnDestroy#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#getSportByType#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#_getInPlayMatches#0;n#HomeComponent#0" />
+                <element signature="n#!!block;n#addMatchesIntoArray#0;n#HomeComponent#0" />
               </folding>
             </state>
           </provider>
@@ -440,7 +445,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86682000" />
+    <option name="totallyTimeSpent" value="86821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -943,14 +948,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/XoGames/src/app/main/components/home/home.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="114" column="64" selection-start-line="114" selection-start-column="64" selection-end-line="114" selection-end-column="64" />
+        <state relative-caret-position="105">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
+            <element signature="n#!!block;n#ngOnInit#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#getSoccer#0;n#HomeComponent#0" />
             <element signature="n#!!block;n#getSportTypeE#0;n#HomeComponent#0" />
             <element signature="n#!!block;n#getSportTypeE#1;n#HomeComponent#0" />
             <element signature="n#!!block;n#openTicketDialog#0;n#HomeComponent#0" />
             <element signature="n#!!block;n#ngOnDestroy#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#getSportByType#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#_getInPlayMatches#0;n#HomeComponent#0" />
+            <element signature="n#!!block;n#addMatchesIntoArray#0;n#HomeComponent#0" />
           </folding>
         </state>
       </provider>

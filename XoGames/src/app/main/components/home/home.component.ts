@@ -44,10 +44,10 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getMatches();
+    this._getMatches();
   }
 
-  getMatches(): void {
+  private _getMatches(): void {
     this._sportService.getSoccer().pipe(
       takeUntil(this._unsubscribe)
     ).subscribe(res => {
@@ -64,7 +64,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     return MatchTypeE
   }
 
-  openTicketDialog(event: any): void {
+  public openTicketDialog(event: any): void {
     const dialogRef = this._ticketDialog.open(TicketDialogComponent,
       {
         width: '350px',
@@ -77,11 +77,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     console.log(event);
   }
 
-  ngOnDestroy(): void {
-    this._unsubscribe.next(true)
-  }
-
-  fetchMatches(matchType: MatchTypeE, sportType: SportTypeE): void {
+  public fetchMatches(matchType: MatchTypeE, sportType: SportTypeE): void {
     switch (sportType) {
       case this.getSportTypeE.SOCCER:
         this._addMatchesIntoArray(matchType, sportType);
@@ -118,5 +114,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     } else if (matchType === this.getMatchTypeE.PREMATCH) {
       this.preMatches = this._getMatchByTypeAndSportType(matchType, sportType);
     }
+  }
+
+  ngOnDestroy(): void {
+    this._unsubscribe.next(true)
   }
 }
