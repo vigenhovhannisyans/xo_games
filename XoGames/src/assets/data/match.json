@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "firstTeam": {
       "id": 1,
       "imageURL": "manchester",
@@ -15,11 +16,194 @@
     "day": "Sat Oct 22 2022 00:00:00 GMT+0400",
     "hour": "Sat Oct 22 2022 15:30:00 GMT+0400",
     "sportType": "soccer",
-    "matchType": "inPlay",
+    "matchType": "prematch",
     "ratioOne": 1.3,
     "ratioTwo": 2.6,
     "ratioX": 1.9,
     "ratioBet": 3
-
+  },
+  {
+    "id": 2,
+    "firstTeam": {
+      "id": 2,
+      "imageURL": "barcelona",
+      "name": "Barcelona FC",
+      "score": 0
+    },
+    "secondTeam": {
+      "id": 3,
+      "imageURL": "juventus",
+      "name": "Juventus",
+      "score": 0
+    },
+    "day": "Sat Sep 22 2022 00:00:00 GMT+0400",
+    "hour": "Sat Sep 22 2022 13:00:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 1,
+    "ratioTwo": 3.6,
+    "ratioX": 1.8,
+    "ratioBet": 2.3
+  },
+  {
+    "id": 3,
+    "firstTeam": {
+      "id": 4,
+      "imageURL": "liverpool",
+      "name": "Liverpool",
+      "score": 1
+    },
+    "secondTeam": {
+      "id": 5,
+      "imageURL": "tottenham",
+      "name": "Tottenham",
+      "score": 0
+    },
+    "day": "Sat Sep 22 2022 00:00:00 GMT+0400",
+    "hour": "Sat Sep 22 2022 13:00:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 1.2,
+    "ratioTwo": 0.6,
+    "ratioX": 1.9,
+    "ratioBet": 2.5
+  },
+  {
+    "id": 4,
+    "firstTeam": {
+      "id": 2,
+      "imageURL": "arsenal",
+      "name": "Arsenal",
+      "score": 0
+    },
+    "secondTeam": {
+      "id": 1,
+      "imageURL": "manchester",
+      "name": "Manchester City",
+      "score": 3
+    },
+    "day": "Sat Oct 22 2022 00:00:00 GMT+0400",
+    "hour": "Sat Oct 22 2022 15:30:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 1.5,
+    "ratioTwo": 0.6,
+    "ratioX": 2,
+    "ratioBet": 1.2
+  },
+  {
+    "id": 5,
+    "firstTeam": {
+      "id": 2,
+      "imageURL": "arsenal",
+      "name": "Arsenal",
+      "score": 0
+    },
+    "secondTeam": {
+      "id": 3,
+      "imageURL": "juventus",
+      "name": "Juventus",
+      "score": 0
+    },
+    "day": "Sat Sep 20 2022 00:00:00 GMT+0400",
+    "hour": "Sat Sep 21 2022 13:00:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 1,
+    "ratioTwo": 2.6,
+    "ratioX": 1.9,
+    "ratioBet": 9.3
+  },
+  {
+    "id": 6,
+    "firstTeam": {
+      "id": 5,
+      "imageURL": "tottenham",
+      "name": "Tottenham",
+      "score": 0
+    },
+    "secondTeam": {
+      "id": 4,
+      "imageURL": "liverpool",
+      "name": "Liverpool",
+      "score": 1
+    },
+    "day": "Sat Oct 10 2022 00:00:00 GMT+0400",
+    "hour": "Sat Oct 10 2022 13:00:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 0.2,
+    "ratioTwo": 1.6,
+    "ratioX": 1,
+    "ratioBet": 2
+  },
+  {
+    "id": 7,
+    "firstTeam": {
+      "id": 1,
+      "imageURL": "manchester",
+      "name": "Manchester City",
+      "score": 3
+    },
+    "secondTeam": {
+      "id": 2,
+      "imageURL": "arsenal",
+      "name": "Arsenal",
+      "score": 0
+    },
+    "day": "Sat Nov 10 2022 00:00:00 GMT+0400",
+    "hour": "Sat Nov 10 2022 05:30:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 2,
+    "ratioTwo": 3.6,
+    "ratioX": 1.0,
+    "ratioBet": 5
+  },
+  {
+    "id": 8,
+    "firstTeam": {
+      "id": 2,
+      "imageURL": "barcelona",
+      "name": "Barcelona FC",
+      "score": 1
+    },
+    "secondTeam": {
+      "id": 3,
+      "imageURL": "juventus",
+      "name": "Juventus",
+      "score": 2
+    },
+    "day": "Oct Sep 22 2022 00:00:00 GMT+0400",
+    "hour": "Oct Sep 22 2022 03:00:00 GMT+0400",
+    "sportType": "soccer",
+    "matchType": "inPlay",
+    "ratioOne": 3,
+    "ratioTwo": 8.6,
+    "ratioX": 3,
+    "ratioBet": 5
+  },
+  {
+    "id": 9,
+    "firstTeam": {
+      "id": 4,
+      "imageURL": "liverpool",
+      "name": "Liverpool",
+      "score": 1
+    },
+    "secondTeam": {
+      "id": 5,
+      "imageURL": "tottenham",
+      "name": "Tottenham",
+      "score": 2
+    },
+    "day": "Sat Sep 22 2022 00:00:00 GMT+0400",
+    "hour": "Sat Sep 22 2022 13:00:00 GMT+0400",
+    "sportType": "tennis",
+    "matchType": "inPlay",
+    "ratioOne": 8.2,
+    "ratioTwo": 1.9,
+    "ratioX": 3.2,
+    "ratioBet": 2.5
   }
 ]

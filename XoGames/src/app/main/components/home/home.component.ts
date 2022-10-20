@@ -13,6 +13,7 @@ import {takeUntil} from "rxjs/operators";
 import {MatDialog} from "@angular/material/dialog";
 import {TicketDialogComponent} from "../dialogs/ticket-dialog/ticket-dialog.component";
 import {SportTypeE} from "../../../core/enums/sport-type.enum";
+import {MatchTypeE} from "../../../core/enums/match-type.enum";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -30,6 +31,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   public smallSlide = HomeSecondSlider;
   public matchSliderConfig = MatchSliderConfig;
   public slideConfig = HomeSliderConfig;
+  public inPlayMatches!: MatchI[];
+  public preMatches!: MatchI[];
   private _unsubscribe = new Subject<boolean>();
 
   constructor(
@@ -48,12 +51,16 @@ export class HomeComponent implements OnInit, OnDestroy {
       takeUntil(this._unsubscribe)
     ).subscribe(res => {
       this.matches = res;
-      console.log(this.matches);
+      this.inPlayMatches = res.filter(match => match.matchType === this.getMatchTypeE.IN_PLAY);
     })
   }
 
   get getSportTypeE(): typeof SportTypeE{
     return SportTypeE
+  }
+
+  get getMatchTypeE(): typeof MatchTypeE{
+    return MatchTypeE
   }
 
   openTicketDialog(event: any): void {
@@ -73,4 +80,35 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._unsubscribe.next(true)
   }
 
+  fetchMatches(matchType: MatchTypeE, sportType: SportTypeE): void {
+    switch (sportType) {
+      case this.getSportTypeE.SOCCER:
+          if(matchType === this.getMatchTypeE.IN_PLAY) this.inPlayMatches = this._getMatchByTypeAndSportType(matchType,sportType);
+          if(matchType === this.getMatchTypeE.PREMATCH) this.preMatches = this._getMatchByTypeAndSportType(matchType,sportType);
+        break;
+        case this.getSportTypeE.TENNIS:
+          if(matchType === this.getMatchTypeE.IN_PLAY) this.inPlayMatches = this._getMatchByTypeAndSportType(matchType,sportType);
+        break;
+        case this.getSportTypeE.BOXING:
+          if(matchType === this.getMatchTypeE.IN_PLAY) this.inPlayMatches = this._getMatchByTypeAndSportType(matchType,sportType);
+        break;
+        case this.getSportTypeE.BASKETBALL:
+          if(matchType === this.getMatchTypeE.IN_PLAY) this.inPlayMatches = this._getMatchByTypeAndSportType(matchType,sportType);
+        break;
+      case this.getSportTypeE.ALL:
+        if(matchType === this.getMatchTypeE.IN_PLAY) this.inPlayMatches = this._getMatchByTypeAndSportType(matchType);
+        break;
+      default:
+        this.inPlayMatches = [];
+        break;
+    }
+  }
+
+  private _getMatchByTypeAndSportType(matchType: MatchTypeE, sportType?: SportTypeE): MatchI[]{
+    return this.matches.filter(match =>
+      match.sportType === sportType &&
+      match.matchType === matchType ||
+      sportType === undefined &&
+      match.matchType === matchType);
+  }
 }

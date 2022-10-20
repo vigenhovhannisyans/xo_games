@@ -209,7 +209,7 @@
     }
   }
 
-  .soccer-slider {
+  .match-slider {
     ::ng-deep {
       .slick-next {
         position: absolute;
@@ -1001,7 +1001,7 @@
     }
   }
   @media (max-width: 991px) {
-    .soccer-slider {
+    .match-slider {
       ::ng-deep {
         .slick-prev {
           display: none !important;

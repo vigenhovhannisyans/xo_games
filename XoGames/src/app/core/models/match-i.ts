@@ -3,6 +3,7 @@ import {MatchTypeE} from "../enums/match-type.enum";
 import {SportTypeE} from "../enums/sport-type.enum";
 
 export interface MatchI {
+  id: number;
   firstTeam: Team;
   secondTeam: Team;
   day: Date;
