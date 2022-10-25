@@ -3,18 +3,21 @@ import { CommonModule } from '@angular/common';
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from "@angular/material/icon";
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   imports: [
     CommonModule,
     MatDialogModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule
   ],
   exports:[
     MatDialogModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    MatRadioModule
   ]
 })
 export class MaterialModule { }

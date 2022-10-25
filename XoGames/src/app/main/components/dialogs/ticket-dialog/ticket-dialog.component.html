@@ -1,5 +1,4 @@
 <div [ngSwitch]="viewOrPutBet" class="ticket">
-  <span class="hole"></span>
   <div class="header">
     <div class="title-side">
       <span [class.active]="viewOrPutBet === 0" (click)="viewOrPutBet = 0" class="title">Ticket <span
@@ -11,140 +10,91 @@
       <mat-icon mat-dialog-close>close</mat-icon>
     </div>
   </div>
-  <div *ngSwitchCase="0" class="body-side">
-    <div class="body-header">
-      <span [class.active]="bet === 0" (click)="bet = 0" class="title">Single Bet</span>
-      <span [class.active]="bet === 1" (click)="bet = 1" class="title">Express</span>
-    </div>
-    <div [class.active]="bet !== 0" [ngSwitch]="bet" class="ticket-body">
-
-      <div [class.active]="bet === 1" class="ticket-block">
-        <div class="header-side">
-          <div class="title-and-check">
-            <mat-checkbox [checked]="bet === 1" class="example-margin"></mat-checkbox>
-            <span class="title">Arsenal vs. Manchester United</span>
+  <form class="form" [formGroup]="betForm">
+    <div [class.second-team]="data.betType === 'two'" class="ticket-body">
+      <div class="hole"></div>
+      <div class="hole second"></div>
+      <div class="main-ticket">
+        <div class="header">
+          <div class="checkbox-and-team-name">
+            <mat-radio-button [value]="data.match.firstTeam.id"></mat-radio-button>
+            <span class="team-name">{{data.match.firstTeam.name}} vs. {{data.match.secondTeam.name}}</span>
           </div>
-          <div class="trash">
+          <div class="trash-side">
             <app-icon
-              [imageName]="'trash'"
-              [isIcon]="true"
-              [width]="20"
-              [height]="20"
+            [isIcon]="true"
+            [imageName]="'trash'"
+            [width]="20"
+            [height]="20"
             ></app-icon>
           </div>
         </div>
-        <div class="winner-side">
-          <span class="winner">Winner - <span class="team">Manchester United</span></span>
-          <span class="bet">29.5</span>
-        </div>
-        <div *ngSwitchCase="0" class="add-bet-side">
-          <div class="bet-side">
-            <div class="dollar">
-              <app-icon
-                [isIcon]="true"
-                [imageName]="'dollar'"
-                [width]="15"
-                [height]="15"
-              ></app-icon>
-            </div>
-            <input type="number" class="take-bet" placeholder="0">
-            <span class="possible">Possible win</span>
-          </div>
-          <span class="win">$ 0</span>
-        </div>
-      </div>
-      <div [class.active]="bet === 1" class="ticket-block">
-        <div class="header-side">
-          <div class="title-and-check">
-            <mat-checkbox [checked]="bet === 1" class="example-margin"></mat-checkbox>
-            <span class="title">Arsenal vs. Manchester United</span>
-          </div>
-          <div class="trash">
-            <app-icon
-              [imageName]="'trash'"
-              [isIcon]="true"
-              [width]="20"
-              [height]="20"
-            ></app-icon>
+        <div class="winner-and-ratio">
+          <span class="winner-side">
+            <span class="winner">Winner - </span>
+            <span class="team-name">{{data.match.firstTeam.name}}</span>
+          </span>
+          <div class="ratio">
+            {{data.match.ratioOne}}
           </div>
         </div>
-        <div class="winner-side">
-          <span class="winner">Winner - <span class="team">Manchester United</span></span>
-          <span class="bet">29.5</span>
-        </div>
-        <div *ngSwitchCase="0" class="add-bet-side">
-          <div class="bet-side">
-            <div class="dollar">
-              <app-icon
-                [isIcon]="true"
-                [imageName]="'dollar'"
-                [width]="15"
-                [height]="15"
-              ></app-icon>
-            </div>
-            <input type="number" class="take-bet" placeholder="0">
-            <span class="possible">Possible win</span>
-          </div>
-          <span class="win">$ 0</span>
-        </div>
-      </div>
-      <div [class.express-side]="bet === 1" *ngSwitchCase="1" class="add-bet-side">
-        <span class="express">Express bet *</span>
         <div class="bet-side">
-          <div class="dollar">
+          <div class="icon">
+            <app-icon
+            [width]="15"
+            [height]="15"
+            [isIcon]="true"
+            [imageName]="'dollar'"
+            ></app-icon>
+          </div>
+          <input [class.disabled]="false" formControlName="firstTeam" class="bet-input" placeholder="0" type="number">
+          <span class="possible"><- Possible win -></span>
+          <span class="win">${{possibleWinForFirstTeam}}</span>
+          <span *ngIf="betForm.controls.firstTeam.invalid" class="min-bet">Min. bet 25$*</span>
+
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="main-ticket">
+        <div class="header">
+          <div class="checkbox-and-team-name">
+            <mat-checkbox formControlName="secondTeamCheck" class="example-margin"></mat-checkbox>
+            <span class="team-name">{{data.match.secondTeam.name}} vs. {{data.match.firstTeam.name}}</span>
+          </div>
+          <div class="trash-side">
             <app-icon
               [isIcon]="true"
-              [imageName]="'dollar'"
+              [imageName]="'trash'"
+              [width]="20"
+              [height]="20"
+            ></app-icon>
+          </div>
+        </div>
+        <div class="winner-and-ratio">
+          <span class="winner-side">
+            <span class="winner">Winner - </span>
+            <span class="team-name">{{data.match.secondTeam.name}}</span>
+          </span>
+          <div class="ratio">
+            {{data.match.ratioTwo}}
+          </div>
+        </div>
+        <div class="bet-side">
+          <div class="icon">
+            <app-icon
               [width]="15"
               [height]="15"
+              [isIcon]="true"
+              [imageName]="'dollar'"
             ></app-icon>
           </div>
-          <input type="number" class="take-bet" placeholder="0">
-          <span class="possible">Possible win</span>
+          <input [class.disabled]="false" formControlName="secondTeam" class="bet-input" placeholder="0" type="number">
+          <span class="possible"><- Possible win -></span>
+          <span class="win">${{possibleWinForSecondTeam}}</span>
+          <span *ngIf="betForm.controls.secondTeam.invalid" class="min-bet">Min. bet 25$*</span>
         </div>
-        <span class="win">$ 0</span>
       </div>
-      <button class="place">Place bet</button>
+      <button [class.disabled]="addDisable()" class="place-bet">Place bet</button>
     </div>
-  </div>
-  <div *ngSwitchCase="1" class="body-side">
-    <div class="body-header">
-      <span [class.active]="bet === 0" (click)="bet = 0" class="title">Single Bet</span>
-      <span [class.active]="bet === 1" (click)="bet = 1" class="title">Express</span>
-    </div>
-    <div [class.active]="bet !== 0" [ngSwitch]="bet" class="ticket-body view">
-
-      <div class="ticket-block">
-        <div class="header-side">
-          <div class="title-and-check check-bet-title">
-            <span class="accepted">Bet accepted 26.09.2020 16:00</span>
-            <span class="title check-bet">Arsenal vs. Manchester United</span>
-          </div>
-        </div>
-        <div class="winner-side">
-          <span class="winner">Winner - <span class="team">Manchester United</span></span>
-          <div class="price-and-percent">
-            <span class="bet-price">You bet &nbsp; $15</span> <span class="bet">29.5</span>
-          </div>
-        </div>
-
-      </div>
-      <div class="ticket-block">
-        <div class="header-side">
-          <div class="title-and-check check-bet-title">
-            <span class="accepted">Bet accepted 26.09.2020 16:00</span>
-            <span class="title check-bet">Arsenal vs. Manchester United</span>
-          </div>
-        </div>
-        <div class="winner-side">
-          <span class="winner">Winner - <span class="team">Manchester United</span></span>
-          <div class="price-and-percent">
-            <span class="bet-price">You bet &nbsp; $15</span> <span class="bet">29.5</span>
-          </div>
-        </div>
-
-      </div>
-      <button class="place">Full cache out &nbsp; $ 35</button>
-    </div>
-  </div>
+  </form>
 </div>

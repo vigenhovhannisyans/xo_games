@@ -6,6 +6,7 @@ import { MainComponent } from './main.component';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from "../shared/shared.module";
 import { TicketDialogComponent } from './components/dialogs/ticket-dialog/ticket-dialog.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,6 +19,8 @@ import { TicketDialogComponent } from './components/dialogs/ticket-dialog/ticket
     CommonModule,
     MainRoutingModule,
     SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MainModule { }

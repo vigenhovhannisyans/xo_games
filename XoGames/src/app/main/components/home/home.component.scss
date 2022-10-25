@@ -651,24 +651,46 @@
         display: flex;
         align-items: center;
         margin-top: 15px;
+        flex-wrap: wrap;
 
         .ticket {
           padding: 18px;
-          width: 50%;
+          width: 100%;
           background: #FFFFFF;
           border-radius: 11px;
           height: 142px;
-          margin-right: 10px;
+          margin-bottom: 12px;
 
           &:last-child {
             margin-right: 0;
           }
 
           .top-side {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .match-time{
+              display: flex;
+              align-items: center;
+              .time{
+                color: #281D34;
+                font-weight: 600;
+                font-size: 13px;
+                margin-left: 5px;
+                display: inline-block;
+              }
+            }
+            .date-and-score{
             .date {
               color: #918A99;
               font-weight: 700;
               font-size: 13px;
+              &.score{
+                color: #CF202C;
+                font-weight: 700;
+                font-size: 18px;
+              }
+            }
             }
 
             .clock {

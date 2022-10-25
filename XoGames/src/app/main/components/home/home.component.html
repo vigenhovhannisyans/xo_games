@@ -83,13 +83,15 @@
   <div [class.flexed-to-down]="(isMobile$ | async)" class="match-side">
     <div [class.displayed]="(isMobile$ | async)" class="sides">
       <div class="header">
-        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.ALL);inPlaySwitch = 0" [class.active]="inPlaySwitch === 0" class="option in-play">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.ALL);inPlaySwitch = 0"
+             [class.active]="inPlaySwitch === 0" class="option in-play">
             <span class="title-side">
              <span class="title">In Play</span>
               <app-live-point></app-live-point>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.SOCCER);inPlaySwitch = 1" [class.active]="inPlaySwitch === 1" class="option soccer">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.SOCCER);inPlaySwitch = 1"
+             [class.active]="inPlaySwitch === 1" class="option soccer">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -103,7 +105,8 @@
              </span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.TENNIS);inPlaySwitch = 2" [class.active]="inPlaySwitch === 2" class="option">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.TENNIS);inPlaySwitch = 2"
+             [class.active]="inPlaySwitch === 2" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -117,7 +120,8 @@
              </span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.BOXING);inPlaySwitch = 3" [class.active]="inPlaySwitch === 3" class="option">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.BOXING);inPlaySwitch = 3"
+             [class.active]="inPlaySwitch === 3" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -131,7 +135,8 @@
              </span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.BASKETBALL);inPlaySwitch = 4" [class.active]="inPlaySwitch === 4" class="option">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.BASKETBALL);inPlaySwitch = 4"
+             [class.active]="inPlaySwitch === 4" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -161,7 +166,8 @@
           </thead>
           <tbody class="body">
           <tr class="body-row" *ngFor="let match of inPlayMatches; index as i">
-            <td class="time"><span class="date">{{match.day | date:'d MMM'}}</span> <span class="clock">{{match.hour | date:'H:mm'}}</span></td>
+            <td class="time"><span class="date">{{match.day | date:'d MMM'}}</span> <span
+              class="clock">{{match.hour | date:'H:mm'}}</span></td>
             <td class="match">
               <span class="team">
                 <span class="score">{{match.firstTeam.score}}</span>
@@ -183,13 +189,13 @@
               <span class="match-time">3'</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">{{match.ratioOne}}</span>
+              <span (click)="openTicketDialog(match,getBetTypeE.ratioOne)" class="column">{{match.ratioOne}}</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">{{match.ratioX}}</span>
+              <span (click)="openTicketDialog(match, getBetTypeE.ratioX)" class="column">{{match.ratioX}}</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">{{match.ratioTwo}}</span>
+              <span (click)="openTicketDialog(match, getBetTypeE.ratioTwo)" class="column">{{match.ratioTwo}}</span>
             </td>
             <td class="bets light-bet">
               <span class="column">
@@ -203,12 +209,14 @@
     </div>
     <div [class.displayed]="(isMobile$ | async)" class="sides">
       <div class="header">
-        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.ALL);preMatchSwitch = 0" [class.active]="preMatchSwitch === 0" class="option in-play">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.ALL);preMatchSwitch = 0"
+             [class.active]="preMatchSwitch === 0" class="option in-play">
             <span class="title-side">
              <span class="title">Prematch</span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.SOCCER);preMatchSwitch = 1" [class.active]="preMatchSwitch === 1" class="option soccer">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.SOCCER);preMatchSwitch = 1"
+             [class.active]="preMatchSwitch === 1" class="option soccer">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -222,7 +230,8 @@
              </span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.TENNIS);preMatchSwitch = 2" [class.active]="preMatchSwitch === 2" class="option">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.TENNIS);preMatchSwitch = 2"
+             [class.active]="preMatchSwitch === 2" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -236,7 +245,8 @@
              </span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.BOXING);preMatchSwitch = 3" [class.active]="preMatchSwitch === 3" class="option">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.BOXING);preMatchSwitch = 3"
+             [class.active]="preMatchSwitch === 3" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -250,7 +260,8 @@
              </span>
             </span>
         </div>
-        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.BASKETBALL);preMatchSwitch = 4" [class.active]="preMatchSwitch === 4" class="option">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.BASKETBALL);preMatchSwitch = 4"
+             [class.active]="preMatchSwitch === 4" class="option">
             <span class="title-side">
               <app-icon
                 [isIcon]="true"
@@ -279,7 +290,8 @@
           </thead>
           <tbody class="body">
           <tr class="body-row" *ngFor="let match of preMatches; index as i">
-            <td class="time"><span class="date">{{match.day | date:'d MMM'}}</span> <span class="clock">{{match.hour | date:'H:mm'}}</span></td>
+            <td class="time"><span class="date">{{match.day | date:'d MMM'}}</span> <span
+              class="clock">{{match.hour | date:'H:mm'}}</span></td>
             <td class="match">
               <span class="team">
                 <span class="title">{{match.firstTeam.name}}</span>
@@ -289,13 +301,13 @@
               </span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">{{match.ratioOne}}</span>
+              <span (click)="openTicketDialog(match,getBetTypeE.ratioOne)" class="column">{{match.ratioOne}}</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">{{match.ratioX}}</span>
+              <span (click)="openTicketDialog(match, getBetTypeE.ratioX)" class="column">{{match.ratioX}}</span>
             </td>
             <td class="bets">
-              <span (click)="openTicketDialog(match)" class="column">{{match.ratioTwo}}</span>
+              <span (click)="openTicketDialog(match, getBetTypeE.ratioTwo)" class="column">{{match.ratioTwo}}</span>
             </td>
             <td class="bets light-bet">
               <span class="column">
@@ -315,7 +327,8 @@
         </span>
       </div>
       <div class="categories-side">
-        <div (click)="inPlaySwitch = 0" [ngClass]="{'active':inPlaySwitch===0, 'soccer':inPlaySwitch === 0}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.SOCCER);inPlaySwitch = 0"
+             [ngClass]="{'active':inPlaySwitch===0, 'soccer':inPlaySwitch === 0}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'soccer'"
@@ -325,7 +338,8 @@
           ></app-icon>
           <div class="title">Soccer</div>
         </div>
-        <div (click)="inPlaySwitch = 1" [ngClass]="{'active':inPlaySwitch===1}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.BASKETBALL);inPlaySwitch = 1"
+             [ngClass]="{'active':inPlaySwitch===1}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'basketball'"
@@ -335,7 +349,8 @@
           ></app-icon>
           <div class="title">Basketball</div>
         </div>
-        <div (click)="inPlaySwitch = 2" [ngClass]="{'active':inPlaySwitch===2}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.TENNIS);inPlaySwitch = 2"
+             [ngClass]="{'active':inPlaySwitch===2}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'tennis'"
@@ -345,7 +360,8 @@
           ></app-icon>
           <div class="title">Tennis</div>
         </div>
-        <div (click)="inPlaySwitch = 3" [ngClass]="{'active':inPlaySwitch===3}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.BOXING);inPlaySwitch = 3"
+             [ngClass]="{'active':inPlaySwitch===3}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'boxing'"
@@ -355,7 +371,8 @@
           ></app-icon>
           <div class="title">Boxing</div>
         </div>
-        <div (click)="inPlaySwitch = 4" [ngClass]="{'active':inPlaySwitch===4}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.IN_PLAY,getSportTypeE.VOLLEYBALL);inPlaySwitch = 4"
+             [ngClass]="{'active':inPlaySwitch===4}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'volleyball'"
@@ -377,72 +394,54 @@
       ></app-icon>
     </span>
       <div class="ticket-side">
-        <div class="ticket">
+        <ng-container *ngFor="let match of inPlayMatches; index as i">
+          <div *ngIf="match.matchType === getMatchTypeE.IN_PLAY && i < 5" class="ticket">
         <span class="top-side">
-          <span class="date">8 jan</span>
-          <span class="clock">05:27</span>
+          <span class="date-and-score">
+            <span class="date score">{{match.firstTeam.score}}:{{match.secondTeam.score}}</span>
+            <span class="clock">{{match.hour | date:'H:mm'}}</span>
+          </span>
+          <span class="match-time">
+            <app-icon
+              [isIcon]="true"
+              [imageName]="'clock'"
+              [width]="15"
+              [height]="15"
+            ></app-icon>
+            <span class="time">
+              3'
+            </span>
+            </span>
         </span>
-          <div class="team-side">
-            <div class="team">
+            <div class="team-side">
+              <div class="team">
             <span class="team-name">
-              Switzerland (Apollo)
+              {{match.firstTeam.name}}
             </span>
-              <span class="team-name">
-              Australia (Kubrik)
+                <span class="team-name">
+              {{match.secondTeam.name}}
             </span>
+              </div>
+              <div class="bet">
+                + {{match.ratioBet}}
+              </div>
             </div>
-            <div class="bet">
-              +35
+            <div class="bet-side">
+              <div (click)="openTicketDialog(match, getBetTypeE.ratioOne)" class="bet-block-side">
+                <span class="title">1</span>
+                <span class="bet-block">{{match.ratioOne}}</span>
+              </div>
+              <div (click)="openTicketDialog(match, getBetTypeE.ratioX)" class="bet-block-side">
+                <span class="title">X</span>
+                <span class="bet-block">{{match.ratioX}}</span>
+              </div>
+              <div (click)="openTicketDialog(match, getBetTypeE.ratioTwo)" class="bet-block-side">
+                <span class="title">2</span>
+                <span class="bet-block">{{match.ratioTwo}}</span>
+              </div>
             </div>
           </div>
-          <div class="bet-side">
-            <div class="bet-block-side">
-              <span class="title">1</span>
-              <span class="bet-block">1.9</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">X</span>
-              <span class="bet-block">43</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">2</span>
-              <span class="bet-block">15</span>
-            </div>
-          </div>
-        </div>
-        <div class="ticket">
-        <span class="top-side">
-          <span class="date">8 jan</span>
-          <span class="clock">05:27</span>
-        </span>
-          <div class="team-side">
-            <div class="team">
-            <span class="team-name">
-              Switzerland (Apollo)
-            </span>
-              <span class="team-name">
-              Australia (Kubrik)
-            </span>
-            </div>
-            <div class="bet">
-              +35
-            </div>
-          </div>
-          <div class="bet-side">
-            <div class="bet-block-side">
-              <span class="title">1</span>
-              <span class="bet-block">1.9</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">X</span>
-              <span class="bet-block">43</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">2</span>
-              <span class="bet-block">15</span>
-            </div>
-          </div>
-        </div>
+        </ng-container>
       </div>
       <button class="show-all-events-btn">
         Show all events
@@ -457,10 +456,11 @@
     </div>
     <div [class.show-displayed]="(isMobile$ | async)" class="in-play-mobile">
       <div class="title-side">
-        <span class="title">preMatchSwitch</span>
+        <span class="title">Pre match</span>
       </div>
       <div class="categories-side">
-        <div (click)="preMatchSwitch = 0" [ngClass]="{'active':preMatchSwitch===0, 'soccer':preMatchSwitch === 0}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.SOCCER);preMatchSwitch = 0"
+             [ngClass]="{'active':preMatchSwitch===0, 'soccer':preMatchSwitch === 0}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'soccer'"
@@ -470,7 +470,8 @@
           ></app-icon>
           <div class="title">Soccer</div>
         </div>
-        <div (click)="preMatchSwitch = 1" [ngClass]="{'active':preMatchSwitch===1}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.BASKETBALL);preMatchSwitch = 1"
+             [ngClass]="{'active':preMatchSwitch===1}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'basketball'"
@@ -480,7 +481,8 @@
           ></app-icon>
           <div class="title">Basketball</div>
         </div>
-        <div (click)="preMatchSwitch = 2" [ngClass]="{'active':preMatchSwitch===2}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.TENNIS);preMatchSwitch = 2"
+             [ngClass]="{'active':preMatchSwitch===2}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'tennis'"
@@ -490,7 +492,8 @@
           ></app-icon>
           <div class="title">Tennis</div>
         </div>
-        <div (click)="preMatchSwitch = 3" [ngClass]="{'active':preMatchSwitch===3}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.BOXING);preMatchSwitch = 3"
+             [ngClass]="{'active':preMatchSwitch===3}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'boxing'"
@@ -500,7 +503,8 @@
           ></app-icon>
           <div class="title">Boxing</div>
         </div>
-        <div (click)="preMatchSwitch = 4" [ngClass]="{'active':preMatchSwitch===4}" class="category">
+        <div (click)="fetchMatches(getMatchTypeE.PREMATCH,getSportTypeE.VOLLEYBALL);preMatchSwitch = 4"
+             [ngClass]="{'active':preMatchSwitch===4}" class="category">
           <app-icon
             [isWhite]="true"
             [imageName]="'volleyball'"
@@ -522,72 +526,41 @@
       ></app-icon>
     </span>
       <div class="ticket-side">
-        <div class="ticket">
+        <ng-container *ngFor="let match of preMatches; index as i">
+          <div *ngIf="match.matchType === getMatchTypeE.PREMATCH && i < 5" class="ticket">
         <span class="top-side">
           <span class="date">8 jan</span>
           <span class="clock">05:27</span>
         </span>
-          <div class="team-side">
-            <div class="team">
+            <div class="team-side">
+              <div class="team">
             <span class="team-name">
               Switzerland (Apollo)
             </span>
-              <span class="team-name">
+                <span class="team-name">
               Australia (Kubrik)
             </span>
+              </div>
+              <div class="bet">
+                +35
+              </div>
             </div>
-            <div class="bet">
-              +35
-            </div>
-          </div>
-          <div class="bet-side">
-            <div class="bet-block-side">
-              <span class="title">1</span>
-              <span class="bet-block">1.9</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">X</span>
-              <span class="bet-block">43</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">2</span>
-              <span class="bet-block">15</span>
-            </div>
-          </div>
-        </div>
-        <div class="ticket">
-        <span class="top-side">
-          <span class="date">8 jan</span>
-          <span class="clock">05:27</span>
-        </span>
-          <div class="team-side">
-            <div class="team">
-            <span class="team-name">
-              Switzerland (Apollo)
-            </span>
-              <span class="team-name">
-              Australia (Kubrik)
-            </span>
-            </div>
-            <div class="bet">
-              +35
+            <div class="bet-side">
+              <div (click)="openTicketDialog(match, getBetTypeE.ratioOne)" class="bet-block-side">
+                <span class="title">1</span>
+                <span class="bet-block">1.9</span>
+              </div>
+              <div (click)="openTicketDialog(match, getBetTypeE.ratioX)" class="bet-block-side">
+                <span class="title">X</span>
+                <span class="bet-block">43</span>
+              </div>
+              <div (click)="openTicketDialog(match, getBetTypeE.ratioTwo)" class="bet-block-side">
+                <span class="title">2</span>
+                <span class="bet-block">15</span>
+              </div>
             </div>
           </div>
-          <div class="bet-side">
-            <div class="bet-block-side">
-              <span class="title">1</span>
-              <span class="bet-block">1.9</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">X</span>
-              <span class="bet-block">43</span>
-            </div>
-            <div class="bet-block-side">
-              <span class="title">2</span>
-              <span class="bet-block">15</span>
-            </div>
-          </div>
-        </div>
+        </ng-container>
       </div>
       <button class="show-all-events-btn">
         Show all events
@@ -727,9 +700,9 @@
         </div>
       </div>
       <div [ngSwitch]="casino" class="game-side">
-         <div *ngSwitchCase="0" class="game-block">
-           <ng-container *ngFor="let game of countries; let i = index">
-           <div *ngIf="i < 6" class="game">
+        <div *ngSwitchCase="0" class="game-block">
+          <ng-container *ngFor="let game of countries; let i = index">
+            <div *ngIf="i < 6" class="game">
               <app-icon
                 [isCasino]="true"
                 [imageName]="'fruit'"
@@ -737,12 +710,12 @@
                 [height]="150"
               ></app-icon>
             </div>
-           </ng-container>
-           <div class="game hidden-game"></div>
-           <div class="game hidden-game"></div>
-           <div class="game hidden-game"></div>
-           <div class="game hidden-game"></div>
-          </div>
+          </ng-container>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+          <div class="game hidden-game"></div>
+        </div>
 
       </div>
       <button class="show-all-events-btn">

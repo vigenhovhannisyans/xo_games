@@ -14,6 +14,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {TicketDialogComponent} from "../dialogs/ticket-dialog/ticket-dialog.component";
 import {SportTypeE} from "../../../core/enums/sport-type.enum";
 import {MatchTypeE} from "../../../core/enums/match-type.enum";
+import {BetTypeE} from "../../../core/enums/bet-type.enum";
 
 @Component({
   selector: 'app-home',
@@ -65,17 +66,25 @@ export class HomeComponent implements OnInit, OnDestroy {
     return MatchTypeE
   }
 
-  public openTicketDialog(event: any): void {
+  get getBetTypeE(): typeof BetTypeE {
+    return BetTypeE
+  }
+
+  public openTicketDialog(match: MatchI, betType: BetTypeE): void {
+    console.log(betType);
     const dialogRef = this._ticketDialog.open(TicketDialogComponent,
       {
         width: '350px',
-        height: '470px',
+        height: '510px',
         panelClass: 'ticket-dialog',
+        data: {
+          match: match,
+          betType: betType
+        }
       });
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
-    console.log(event);
   }
 
   public fetchMatches(matchType: MatchTypeE, sportType: SportTypeE): void {
