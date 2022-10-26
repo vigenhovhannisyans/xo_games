@@ -205,9 +205,11 @@
         left: 0;
         transform: translateY(50px);
         transition: all .5s;
-        &.disabled {
-          pointer-events: none;
-          opacity: 0.8;
+        pointer-events: none;
+        opacity: 0.8;
+        &.active {
+          opacity: 1;
+          pointer-events: all;
         }
       }
     }

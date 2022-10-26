@@ -11,13 +11,16 @@
     </div>
   </div>
   <form class="form" [formGroup]="betForm">
+    <mat-radio-group formControlName="checkedTeam" aria-label="Select an option">
+
     <div [class.second-team]="data.betType === 'two'" class="ticket-body">
       <div class="hole"></div>
       <div class="hole second"></div>
       <div class="main-ticket">
         <div class="header">
           <div class="checkbox-and-team-name">
-            <mat-radio-button [value]="data.match.firstTeam.id"></mat-radio-button>
+              <mat-radio-button value="1"></mat-radio-button>
+            <!--<mat-checkbox formControlName="firstTeamCheck" class="example-margin"></mat-checkbox>-->
             <span class="team-name">{{data.match.firstTeam.name}} vs. {{data.match.secondTeam.name}}</span>
           </div>
           <div class="trash-side">
@@ -47,10 +50,10 @@
             [imageName]="'dollar'"
             ></app-icon>
           </div>
-          <input [class.disabled]="false" formControlName="firstTeam" class="bet-input" placeholder="0" type="number">
+          <input formControlName="firstTeam" class="bet-input" placeholder="0" type="number">
           <span class="possible"><- Possible win -></span>
           <span class="win">${{possibleWinForFirstTeam}}</span>
-          <span *ngIf="betForm.controls.firstTeam.invalid" class="min-bet">Min. bet 25$*</span>
+          <span class="min-bet">Min. bet 25$*</span>
 
         </div>
       </div>
@@ -58,7 +61,9 @@
       <div class="main-ticket">
         <div class="header">
           <div class="checkbox-and-team-name">
-            <mat-checkbox formControlName="secondTeamCheck" class="example-margin"></mat-checkbox>
+              <mat-radio-button value="2"></mat-radio-button>
+
+            <!--<mat-checkbox formControlName="secondTeamCheck" class="example-margin"></mat-checkbox>-->
             <span class="team-name">{{data.match.secondTeam.name}} vs. {{data.match.firstTeam.name}}</span>
           </div>
           <div class="trash-side">
@@ -88,13 +93,14 @@
               [imageName]="'dollar'"
             ></app-icon>
           </div>
-          <input [class.disabled]="false" formControlName="secondTeam" class="bet-input" placeholder="0" type="number">
+          <input [class.disabled]="" formControlName="secondTeam" class="bet-input" placeholder="0" type="number">
           <span class="possible"><- Possible win -></span>
           <span class="win">${{possibleWinForSecondTeam}}</span>
-          <span *ngIf="betForm.controls.secondTeam.invalid" class="min-bet">Min. bet 25$*</span>
+          <span class="min-bet">Min. bet 25$*</span>
         </div>
       </div>
-      <button [class.disabled]="addDisable()" class="place-bet">Place bet</button>
+      <button [class.active]="disableButton" class="place-bet">Place bet</button>
     </div>
+    </mat-radio-group>
   </form>
 </div>
