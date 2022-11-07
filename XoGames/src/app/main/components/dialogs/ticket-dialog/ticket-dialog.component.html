@@ -13,97 +13,100 @@
   <form class="form" [formGroup]="betForm">
     <mat-radio-group formControlName="checkedTeam" aria-label="Select an option">
 
-    <div [class.second-team]="data.betType === 'two'" class="ticket-body">
-      <div class="hole"></div>
-      <div class="hole second"></div>
-      <div class="main-ticket">
-        <div class="header">
-          <div class="checkbox-and-team-name">
-              <mat-radio-button value="1"></mat-radio-button>
-            <!--<mat-checkbox formControlName="firstTeamCheck" class="example-margin"></mat-checkbox>-->
-            <span class="team-name">{{data.match.firstTeam.name}} vs. {{data.match.secondTeam.name}}</span>
+      <div [class.second-team]="data.betType === 'two'" class="ticket-body">
+        <div class="hole"></div>
+        <div class="hole second"></div>
+        <div [class.disabled]="setDisableClass(2)" class="main-ticket">
+          <div class="header">
+            <div class="checkbox-and-team-name">
+              <mat-radio-button [value]="1"></mat-radio-button>
+              <span class="team-name">{{data.match.firstTeam.name}} vs. {{data.match.secondTeam.name}}</span>
+            </div>
+            <div class="trash-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'trash'"
+                [width]="20"
+                [height]="20"
+              ></app-icon>
+            </div>
           </div>
-          <div class="trash-side">
-            <app-icon
-            [isIcon]="true"
-            [imageName]="'trash'"
-            [width]="20"
-            [height]="20"
-            ></app-icon>
-          </div>
-        </div>
-        <div class="winner-and-ratio">
+          <div class="winner-and-ratio">
           <span class="winner-side">
             <span class="winner">Winner - </span>
             <span class="team-name">{{data.match.firstTeam.name}}</span>
           </span>
-          <div class="ratio">
-            {{data.match.ratioOne}}
+            <div class="ratio">
+              {{data.match.ratioOne}}
+            </div>
+          </div>
+          <div class="bet-side">
+            <div class="icon">
+              <app-icon
+                [width]="15"
+                [height]="15"
+                [isIcon]="true"
+                [imageName]="'dollar'"
+              ></app-icon>
+            </div>
+            <input formControlName="firstTeam" class="bet-input"
+                   placeholder="0" type="number">
+            <span class="possible"><- Possible win -></span>
+            <span class="win">${{possibleWinForFirstTeam}}</span>
+            <span class="min-bet" *ngIf="setDisableClass(1) && betForm.controls.firstTeam.invalid">Min. bet 25$ *</span>
+            <span class="min-bet wow" *ngIf="betForm.controls.firstTeam.valid">
+              Wow you can win {{possibleWinForFirstTeam}} dollars $
+            </span>
           </div>
         </div>
-        <div class="bet-side">
-          <div class="icon">
-            <app-icon
-            [width]="15"
-            [height]="15"
-            [isIcon]="true"
-            [imageName]="'dollar'"
-            ></app-icon>
+        <div class="line"></div>
+        <div [class.disabled]="setDisableClass(1)" class="main-ticket">
+          <div class="header">
+            <div class="checkbox-and-team-name">
+              <mat-radio-button [value]="2"></mat-radio-button>
+              <span class="team-name">{{data.match.secondTeam.name}} vs. {{data.match.firstTeam.name}}</span>
+            </div>
+            <div class="trash-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'trash'"
+                [width]="20"
+                [height]="20"
+              ></app-icon>
+            </div>
           </div>
-          <input formControlName="firstTeam" class="bet-input" placeholder="0" type="number">
-          <span class="possible"><- Possible win -></span>
-          <span class="win">${{possibleWinForFirstTeam}}</span>
-          <span class="min-bet">Min. bet 25$ *</span>
-          <span class="min-bet">Min. bet 25$ *</span>
-          <span class="min-bet">Min. bet 25$ *</span>
-
-
-        </div>
-      </div>
-      <div class="line"></div>
-      <div class="main-ticket">
-        <div class="header">
-          <div class="checkbox-and-team-name">
-              <mat-radio-button value="2"></mat-radio-button>
-
-            <!--<mat-checkbox formControlName="secondTeamCheck" class="example-margin"></mat-checkbox>-->
-            <span class="team-name">{{data.match.secondTeam.name}} vs. {{data.match.firstTeam.name}}</span>
-          </div>
-          <div class="trash-side">
-            <app-icon
-              [isIcon]="true"
-              [imageName]="'trash'"
-              [width]="20"
-              [height]="20"
-            ></app-icon>
-          </div>
-        </div>
-        <div class="winner-and-ratio">
+          <div class="winner-and-ratio">
           <span class="winner-side">
             <span class="winner">Winner - </span>
             <span class="team-name">{{data.match.secondTeam.name}}</span>
           </span>
-          <div class="ratio">
-            {{data.match.ratioTwo}}
+            <div class="ratio">
+              {{data.match.ratioTwo}}
+            </div>
+          </div>
+          <div class="bet-side">
+            <div class="icon">
+              <app-icon
+                [width]="15"
+                [height]="15"
+                [isIcon]="true"
+                [imageName]="'dollar'"
+              ></app-icon>
+            </div>
+            <input formControlName="secondTeam" class="bet-input" placeholder="0" type="number" autofocus="autofocus">
+            <span class="possible"><- Possible win -></span>
+            <span class="win">${{possibleWinForSecondTeam}}</span>
+            <span class="min-bet" *ngIf="setDisableClass(2) && betForm.controls.secondTeam.invalid">Min. bet 25$*</span>
+            <span class="min-bet wow" *ngIf="betForm.controls.secondTeam.valid">
+              Wow you can win {{possibleWinForSecondTeam}} dollars $
+            </span>
           </div>
         </div>
-        <div class="bet-side">
-          <div class="icon">
-            <app-icon
-              [width]="15"
-              [height]="15"
-              [isIcon]="true"
-              [imageName]="'dollar'"
-            ></app-icon>
-          </div>
-          <input [class.disabled]="" formControlName="secondTeam" class="bet-input" placeholder="0" type="number">
-          <span class="possible"><- Possible win -></span>
-          <span class="win">${{possibleWinForSecondTeam}}</span>
-          <span class="min-bet">Min. bet 25$*</span>
-        </div>
+        <button
+          [class.active]="showBetButton"
+          class="place-bet">Place bet
+        </button>
       </div>
-      <button [class.active]="disableButton" class="place-bet">Place bet</button>
-    </div>
     </mat-radio-group>
   </form>
 </div>
