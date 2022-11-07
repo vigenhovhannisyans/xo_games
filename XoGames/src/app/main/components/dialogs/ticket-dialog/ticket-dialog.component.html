@@ -16,7 +16,7 @@
       <div [class.second-team]="data.betType === 'two'" class="ticket-body">
         <div class="hole"></div>
         <div class="hole second"></div>
-        <div [class.disabled]="setDisableClass(2)" class="main-ticket">
+        <div *ngIf="data.betType !== getBetTypeEnums.ratioX" [class.disabled]="setDisableClass(2)" class="main-ticket">
           <div class="header">
             <div class="checkbox-and-team-name">
               <mat-radio-button [value]="1"></mat-radio-button>
@@ -59,8 +59,8 @@
             </span>
           </div>
         </div>
-        <div class="line"></div>
-        <div [class.disabled]="setDisableClass(1)" class="main-ticket">
+        <div *ngIf="data.betType !== getBetTypeEnums.ratioX" class="line"></div>
+        <div *ngIf="data.betType !== getBetTypeEnums.ratioX" [class.disabled]="setDisableClass(1)" class="main-ticket">
           <div class="header">
             <div class="checkbox-and-team-name">
               <mat-radio-button [value]="2"></mat-radio-button>
@@ -99,6 +99,58 @@
             <span class="min-bet" *ngIf="setDisableClass(2) && betForm.controls.secondTeam.invalid">Min. bet 25$*</span>
             <span class="min-bet wow" *ngIf="betForm.controls.secondTeam.valid">
               Wow you can win {{possibleWinForSecondTeam}} dollars $
+            </span>
+          </div>
+        </div>
+
+        <div *ngIf="data.betType === getBetTypeEnums.ratioX" class="main-ticket draw">
+          <div class="header">
+            <div class="checkbox-and-team-name">
+              <mat-radio-button *ngIf="data.betType !== getBetTypeEnums.ratioX" [value]="1"></mat-radio-button>
+              <span class="team-name">{{data.match.firstTeam.name}} vs. {{data.match.secondTeam.name}}</span>
+            </div>
+            <div class="trash-side">
+              <app-icon
+                [isIcon]="true"
+                [imageName]="'trash'"
+                [width]="20"
+                [height]="20"
+              ></app-icon>
+            </div>
+          </div>
+          <div class="winner-and-ratio">
+          <span class="winner-side">
+            <span class="winner">Winner - </span>
+            <span class="team-name">No winner</span>
+          </span>
+            <div class="ratio">
+              {{data.match.ratioX}}
+            </div>
+          </div>
+          <div class="score-side">
+            <span class="score">I guess score maight be</span>
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group draw-radio-group">
+              <mat-radio-button *ngFor="let score of scores" class="example-radio-button draw-radio-btn" [value]="score.value">
+                   {{score.display}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="bet-side">
+            <div class="icon">
+              <app-icon
+                [width]="15"
+                [height]="15"
+                [isIcon]="true"
+                [imageName]="'dollar'"
+              ></app-icon>
+            </div>
+            <input formControlName="firstTeam" class="bet-input"
+                   placeholder="0" type="number">
+            <span class="possible"><- Possible win -></span>
+            <span class="win">${{possibleWinForFirstTeam}}</span>
+            <span class="min-bet" *ngIf="setDisableClass(1) && betForm.controls.firstTeam.invalid">Min. bet 25$ *</span>
+            <span class="min-bet wow" *ngIf="betForm.controls.firstTeam.valid">
+              Wow you can win {{possibleWinForFirstTeam}} dollars $
             </span>
           </div>
         </div>

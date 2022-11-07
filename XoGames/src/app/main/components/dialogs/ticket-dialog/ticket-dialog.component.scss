@@ -108,6 +108,9 @@
           }
 
         }
+        &.draw{
+          height: 100%;
+        }
 
         .header {
           margin-bottom: 15px;
@@ -157,7 +160,6 @@
             padding-top: 3px;
           }
         }
-
         .bet-side {
           position: relative;
           margin-top: 12px;
@@ -222,6 +224,21 @@
             color: #807D9B;
             font-weight: 700;
             font-size: 14px;
+          }
+        }
+        .score-side{
+          display: flex;
+          flex-direction: column;
+          .score{
+            display: inline-block;
+            font-weight: 600;
+          }
+          .draw-radio-group{
+            display: flex;
+            flex-direction: column;
+            .draw-radio-btn{
+              margin-top: 10px;
+            }
           }
         }
       }

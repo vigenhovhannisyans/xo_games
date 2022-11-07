@@ -15,6 +15,11 @@ type betType = {
   secondTeamCheck: false,
 }
 
+type ScoreType = {
+  value: number;
+  display: string;
+}
+
 @Component({
   selector: 'app-ticket-dialog',
   templateUrl: './ticket-dialog.component.html',
@@ -34,7 +39,14 @@ export class TicketDialogComponent implements OnInit {
   public firstTeamChecked = false;
   public disableButton = false;
   public showBetButton = false;
-
+  public scores: ScoreType[] = [
+    { value: 0, display: '0 - 0' },
+    { value: 1, display: '1 - 1' },
+    { value: 2, display: '2 - 2' },
+    { value: 3, display: '3 - 3' },
+    { value: 4, display: '4 - 4' },
+    { value: 5, display: '5 - 5' },
+  ]
   constructor(
     @Inject(MAT_DIALOG_DATA) private _dialogData: DialogData
   ) {
@@ -71,5 +83,9 @@ export class TicketDialogComponent implements OnInit {
   calculatePossibleWin(bet: number, team: string): void {
     if (team === 'first') this.possibleWinForFirstTeam = Math.floor(this.data.match.ratioOne * bet);
     if (team === 'second') this.possibleWinForSecondTeam = Math.floor(this.data.match.ratioTwo * bet);
+  }
+
+  public get getBetTypeEnums() : typeof BetTypeE{
+  return BetTypeE
   }
 }
