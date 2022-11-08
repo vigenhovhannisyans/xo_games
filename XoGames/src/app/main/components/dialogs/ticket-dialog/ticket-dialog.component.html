@@ -52,10 +52,10 @@
             <input formControlName="firstTeam" class="bet-input"
                    placeholder="0" type="number">
             <span class="possible"><- Possible win -></span>
-            <span class="win">${{possibleWinForFirstTeam}}</span>
+            <span class="win">${{possibleWinForFirstTeam | number:'1.0':'en-US'}}</span>
             <span class="min-bet" *ngIf="setDisableClass(1) && betForm.controls.firstTeam.invalid">Min. bet 25$ *</span>
             <span class="min-bet wow" *ngIf="betForm.controls.firstTeam.valid">
-              Wow you can win {{possibleWinForFirstTeam}} dollars $
+              Wow you can win {{possibleWinForFirstTeam | number:'1.0':'en-US'}} dollars $
             </span>
           </div>
         </div>
@@ -95,10 +95,10 @@
             </div>
             <input formControlName="secondTeam" class="bet-input" placeholder="0" type="number" autofocus="autofocus">
             <span class="possible"><- Possible win -></span>
-            <span class="win">${{possibleWinForSecondTeam}}</span>
+            <span class="win">${{possibleWinForSecondTeam | number:'1.0':'en-US'}}</span>
             <span class="min-bet" *ngIf="setDisableClass(2) && betForm.controls.secondTeam.invalid">Min. bet 25$*</span>
             <span class="min-bet wow" *ngIf="betForm.controls.secondTeam.valid">
-              Wow you can win {{possibleWinForSecondTeam}} dollars $
+              Wow you can win {{possibleWinForSecondTeam | number:'1.0':'en-US'}} dollars $
             </span>
           </div>
         </div>
@@ -147,10 +147,10 @@
             <input formControlName="firstTeam" class="bet-input"
                    placeholder="0" type="number">
             <span class="possible"><- Possible win -></span>
-            <span class="win">${{possibleWinForFirstTeam}}</span>
+            <span class="win">${{possibleWinForFirstTeam | number:'1.0':'en-US'}}</span>
             <span class="min-bet" *ngIf="setDisableClass(1) && betForm.controls.firstTeam.invalid">Min. bet 25$ *</span>
             <span class="min-bet wow" *ngIf="betForm.controls.firstTeam.valid">
-              Wow you can win {{possibleWinForFirstTeam}} dollars $
+              Wow you can win {{possibleWinForFirstTeam | number:'1.0':'en-US'}} dollars $
             </span>
           </div>
         </div>
