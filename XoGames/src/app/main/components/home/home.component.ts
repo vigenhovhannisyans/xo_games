@@ -71,7 +71,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   public openTicketDialog(match: MatchI, betType: BetTypeE): void {
-    console.log(betType);
     const dialogRef = this._ticketDialog.open(TicketDialogComponent,
       {
         width: '350px',

@@ -5,4 +5,5 @@ export enum SportTypeE {
   BOXING = 'boxing',
   BASKETBALL = 'basketball',
   VOLLEYBALL = 'volleyball',
+  CRICKET = 'cricket',
 }
